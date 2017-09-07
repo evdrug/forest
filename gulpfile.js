@@ -10,8 +10,9 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     pug = require('gulp-pug'),
     tinypng = require('gulp-tinypng'),
-    responsive = require('gulp-responsive'),
-    browserSync = require('browser-sync').create();
+    responsive = require('gulp-responsive');
+const browserSync = require('browser-sync').create();
+
 
 
 const paths = {
@@ -26,7 +27,7 @@ const paths = {
     },
     templates: {
         src: 'src/templates/**/*.pug',
-        dest: root
+        dest: 'dst'
     },
     images: {
         src: 'src/images/**/*.*',
@@ -64,6 +65,47 @@ function imagesPng() {
         .pipe(gulp.dest(paths.images.dest));
 }
 
+function styles() {
+    return gulp.src('./src/styles/index.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass({outputStyle: 'compressed'}))
+        .pipe(sourcemaps.write())
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest(paths.styles.dest))
+}
+
+function scripts() {
+    return gulp.src(paths.scripts.src)
+        .pipe(gulp.dest(paths.scripts.dest));
+}
+
+
+function server() {
+    browserSync.init({
+        server: paths.root,
+        open: false
+    });
+    browserSync.watch(paths.root + '/**/*.*', browserSync.reload);
+}
+
+
+function watch() {
+    gulp.watch(paths.scripts.src, scripts);
+    gulp.watch(paths.styles.src, styles);
+    gulp.watch(paths.templates.src, templates);
+    // gulp.watch(paths.images.src, images);
+}
+
 exports.templates = templates;
 exports.images = images;
 exports.imagesPng = imagesPng;
+exports.styles = styles;
+exports.scripts = scripts;
+exports.server = server;
+exports.watch = watch;
+
+
+gulp.task('default', gulp.series(
+    gulp.parallel(styles, scripts, templates),
+    gulp.parallel( watch,server)
+));

@@ -28,6 +28,6 @@
     "gulp-sourcemaps": "^2.6.1",
     "gulp-tinypng": "^1.0.2",
     "gulp-uglify": "^3.0.0",
-    "webpack": "^3.5.5"
+    "webpack": "^3.5.6"
   }
 }
