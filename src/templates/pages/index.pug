@@ -7,7 +7,7 @@ block content
     .wrapper
         .container-index
             .form
-                form
+                form.form__container
                     .form__title
                         |Авторизуйтесь
                     .form__line
@@ -26,11 +26,13 @@ block content
                         |Вы точно не робот?
                     .form__radio
                         label.form__radio-label
-                            input.form_radio-btn(type="radio")
+                            input.form_radio-btn(type="radio" name="robot" value="no")
                             | Да
                         label.form__radio-label
-                            input.form_radio-btn(type="radio")
+                            input.form_radio-btn(type="radio" name="robot" value="yes")
                             | Не уверен
-                    .form__btn
-                        a.form__btn-link.index(href="")|На главную
-                        a.form__btn-link.login(href="")|Войти
+                    ul.form__btn-list
+                        li.form__btn-item
+                            a.form__btn-link.index(href="")|На главную
+                        li.form__btn-item
+                            a.form__btn-link.login(href="")|Войти

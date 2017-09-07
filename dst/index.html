@@ -13,7 +13,7 @@
     <div class="wrapper">
       <div class="container-index">
         <div class="form">
-          <form>
+          <form class="form__container">
             <div class="form__title">Авторизуйтесь</div>
             <div class="form__line">
               <div class="line"></div>
@@ -34,13 +34,16 @@
             <div class="form__radio-title">Вы точно не робот?</div>
             <div class="form__radio">
               <label class="form__radio-label">
-                <input class="form_radio-btn" type="radio">Да
+                <input class="form_radio-btn" type="radio" name="robot" value="no">Да
               </label>
               <label class="form__radio-label">
-                <input class="form_radio-btn" type="radio">Не уверен
+                <input class="form_radio-btn" type="radio" name="robot" value="yes">Не уверен
               </label>
             </div>
-            <div class="form__btn"><a class="form__btn-link index" href="">На главную</a><a class="form__btn-link login" href="">Войти</a></div>
+            <ul class="form__btn-list">
+              <li class="form__btn-item"><a class="form__btn-link index" href="">На главную</a></li>
+              <li class="form__btn-item"><a class="form__btn-link login" href="">Войти</a></li>
+            </ul>
           </form>
         </div>
       </div>
