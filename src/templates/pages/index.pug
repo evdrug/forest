@@ -4,12 +4,33 @@ block variables
     - var title = 'Добро пожаловать'
 
 block content
-    h1 Главная
-    form
-        label(for="email")
-            |email:
-            input(name="email" id="email")
-        label(for="password")
-            |password:
-            input(name="password" id="password")
-        button Войти
+    .wrapper
+        .container-index
+            .form
+                form
+                    .form__title
+                        |Авторизуйтесь
+                    .form__line
+                        .line
+                    .form__input
+                        .form__img.user
+                        input.form__input(type="text" value="" name="name" placeholder="Логин")
+                    .form__input
+                        .form__img.key
+                        input.form__input(type="password" value="" name="pass" placeholder="Пароль")
+                    .form__check
+                        label.form__check-label
+                            input.form__checkbox(type="checkbox" name="robot" value="0")
+                            | Я человек
+                    .form__radio-title
+                        |Вы точно не робот?
+                    .form__radio
+                        label.form__radio-label
+                            input.form_radio-btn(type="radio")
+                            | Да
+                        label.form__radio-label
+                            input.form_radio-btn(type="radio")
+                            | Не уверен
+                    .form__btn
+                        a.form__btn-link.index(href="")|На главную
+                        a.form__btn-link.login(href="")|Войти

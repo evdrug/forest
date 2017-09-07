@@ -10,15 +10,40 @@
     <link href="./css/index.min.css" rel="stylesheet">
   </head>
   <body>
-    <h1>Главная</h1>
-    <form>
-      <label for="email">email:
-        <input name="email" id="email">
-      </label>
-      <label for="password">password:
-        <input name="password" id="password">
-      </label>
-      <button>Войти</button>
-    </form>
+    <div class="wrapper">
+      <div class="container-index">
+        <div class="form">
+          <form>
+            <div class="form__title">Авторизуйтесь</div>
+            <div class="form__line">
+              <div class="line"></div>
+            </div>
+            <div class="form__input">
+              <div class="form__img user"></div>
+              <input class="form__input" type="text" value="" name="name" placeholder="Логин">
+            </div>
+            <div class="form__input">
+              <div class="form__img key"></div>
+              <input class="form__input" type="password" value="" name="pass" placeholder="Пароль">
+            </div>
+            <div class="form__check">
+              <label class="form__check-label">
+                <input class="form__checkbox" type="checkbox" name="robot" value="0">Я человек
+              </label>
+            </div>
+            <div class="form__radio-title">Вы точно не робот?</div>
+            <div class="form__radio">
+              <label class="form__radio-label">
+                <input class="form_radio-btn" type="radio">Да
+              </label>
+              <label class="form__radio-label">
+                <input class="form_radio-btn" type="radio">Не уверен
+              </label>
+            </div>
+            <div class="form__btn"><a class="form__btn-link index" href="">На главную</a><a class="form__btn-link login" href="">Войти</a></div>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
