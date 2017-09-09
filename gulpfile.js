@@ -8,9 +8,17 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     uglify = require('gulp-uglify'),
     imagemin = require('gulp-imagemin'),
+    pngquant = require('imagemin-pngquant'),
+    jpegoptim = require('imagemin-jpegoptim'),
     pug = require('gulp-pug'),
     tinypng = require('gulp-tinypng'),
-    responsive = require('gulp-responsive');
+    responsive = require('gulp-responsive'),
+    svgSprite = require("gulp-svg-sprites"),
+    svgmin = require('gulp-svgmin'),
+    cheerio = require('gulp-cheerio'),
+    replace = require('gulp-replace'),
+    webpack = require('webpack');
+    gulpWebpack = require('gulp-webpack');
 const browserSync = require('browser-sync').create();
 
 
@@ -52,23 +60,21 @@ function images() {
         //     }],
         // }))
 
-        .pipe(imagemin([
-            imagemin.jpegtran({progressive: true}),
-            imagemin.optipng({optimizationLevel: 3})
-        ]))
+        .pipe(imagemin({
+            progressive: true,
+            optimizationLevel: 3,
+            use: [pngquant(), jpegoptim({max: 80})],
+            interlaced: true
+        }))
         .pipe(gulp.dest(paths.images.dest));
 }
 
-function imagesPng() {
-    return gulp.src('./src/images/**/*.{png,jpg}')
-        .pipe(tinypng('SzLdhIWTmV3paeSEXj-9dCKzN4ORnSMB'))
-        .pipe(gulp.dest(paths.images.dest));
-}
 
 function styles() {
     return gulp.src('./src/styles/index.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'compressed'}))
+        .pipe(autoprefixer())
         .pipe(sourcemaps.write())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(paths.styles.dest))
@@ -76,9 +82,49 @@ function styles() {
 
 function scripts() {
     return gulp.src(paths.scripts.src)
+        .pipe(gulpWebpack({
+            output: {
+                filename: 'bundle.js'
+            }
+
+        }, webpack))
+
         .pipe(gulp.dest(paths.scripts.dest));
 }
 
+function scriptsMin() {
+    return gulp.src(paths.scripts.src)
+        .pipe(gulpWebpack(require('./webpack.config.js'), webpack))
+
+        .pipe(gulp.dest(paths.scripts.dest));
+}
+
+
+
+
+function svgSpriteBuild () {
+    return gulp.src('./src/images/**/*.svg')
+    //  минифицируем svg
+        .pipe(svgmin({
+            js2svg: {
+                pretty: true
+            }
+        }))
+        // Удаляем атрибуты style, fill и stroke из иконок
+        .pipe(cheerio({
+            run: function ($) {
+                $('[fill]').removeAttr('fill');
+                $('[stroke]').removeAttr('stroke');
+                $('[style]').removeAttr('style');
+            },
+            parserOptions: {xmlMode: true}
+        }))
+        // Удаляем баг с заменой >
+        .pipe(replace('&gt;', '>'))
+        // Делаем спрайт
+        .pipe(svgSprite({ mode : 'symbols' }))
+        .pipe(gulp.dest(paths.images.dest));
+}
 
 function server() {
     browserSync.init({
@@ -89,6 +135,14 @@ function server() {
 }
 
 
+function clearDst() {
+    return del(paths.root);
+}
+
+function clear() {
+    return del([paths.scripts.dest,paths.styles.dest,'dst/*.html']);
+}
+//
 function watch() {
     gulp.watch(paths.scripts.src, scripts);
     gulp.watch(paths.styles.src, styles);
@@ -98,14 +152,23 @@ function watch() {
 
 exports.templates = templates;
 exports.images = images;
-exports.imagesPng = imagesPng;
 exports.styles = styles;
 exports.scripts = scripts;
+exports.scriptsMin = scriptsMin;
+exports.svgSpriteBuild = svgSpriteBuild;
 exports.server = server;
 exports.watch = watch;
+exports.clearDst = clearDst;
+exports.clear = clear;
 
 
 gulp.task('default', gulp.series(
+    gulp.series(clear),
     gulp.parallel(styles, scripts, templates),
     gulp.parallel( watch,server)
+));
+
+gulp.task('build', gulp.series(
+    gulp.series(clearDst),
+    gulp.parallel(styles, scriptsMin, templates, images, svgSpriteBuild)
 ));
