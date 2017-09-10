@@ -1,17 +1,15 @@
 var gulp = require('gulp'),
     del = require('del'),
     autoprefixer = require('gulp-autoprefixer'),
-    cssmin = require('gulp-minify-css'),
+    pixrem = require('gulp-pixrem'),
     pug = require('gulp-pug'),
     rename = require("gulp-rename"),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
-    uglify = require('gulp-uglify'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     jpegoptim = require('imagemin-jpegoptim'),
     pug = require('gulp-pug'),
-    tinypng = require('gulp-tinypng'),
     responsive = require('gulp-responsive'),
     svgSprite = require("gulp-svg-sprites"),
     svgmin = require('gulp-svgmin'),
@@ -78,6 +76,14 @@ function styles() {
         .pipe(sourcemaps.write())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(paths.styles.dest))
+}
+
+function styles2() {
+    return gulp.src('./dst/css/*.css')
+        .pipe(pixrem({
+            replace: true
+        }))
+        .pipe(gulp.dest(paths.styles.dest+'/d'))
 }
 
 function scripts() {
@@ -153,6 +159,7 @@ function watch() {
 exports.templates = templates;
 exports.images = images;
 exports.styles = styles;
+exports.styles2 = styles2;
 exports.scripts = scripts;
 exports.scriptsMin = scriptsMin;
 exports.svgSpriteBuild = svgSpriteBuild;

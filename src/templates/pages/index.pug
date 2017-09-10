@@ -1,7 +1,9 @@
 extends ../template
 
+
 block variables
     - var title = 'Добро пожаловать'
+
 
 block content
     .wrapper
@@ -48,12 +50,19 @@ block content
                                 a.form__btn-link.index(href="")|На главную
                             li.form__btn-item
                                 a.form__btn-link.login(href="")|Войти
-                .text
-                    h1|ffffffffff
-                    .form__input
-                        label.form__input-label
-                            .form__img.key
-                                | <svg class="form__img-password">
-                                | <use xlink:href="./images/svg/symbols.svg#password"></use>
-                                | </svg>
-                            input.form__input-text(type="password" value="" name="pass" placeholder="Пароль")
+                .welcom
+                    .user
+                        include ../module/user
+                    .welcom__menu-soc
+                        include ../module/menuSoc
+                    .menu-site
+                        ul.form__btn-list
+                            li.form__btn-item
+                                a.form__btn-link(href="./works.html")
+                                    |Мои работы
+                            li.form__btn-item
+                                a.form__btn-link(href="./about.html")
+                                    |Обо мне
+                            li.form__btn-item
+                                a.form__btn-link(href="./blog.html")
+                                    |Блог

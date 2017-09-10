@@ -1,5 +1,7 @@
 Evgeniy Druzyakin
 
+Пример использования
+```
 npm install - установка зависимостей 
                              
 gulp - запуск сборки для разработки(watch,browser-sync)
@@ -12,4 +14,5 @@ gulp clear  - очиска html, css, js из папки dst
             
 gulp server - запуск browser-sync         
             
-gulp svgSpriteBuild - сборка svg-спрайта             
+gulp svgSpriteBuild - сборка svg-спрайта 
+```            
