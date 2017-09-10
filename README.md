@@ -18,7 +18,9 @@ gulp clearDst - удаление папки dst
             
 gulp clear  - очиска html, css, js из папки dst      
             
-gulp server - запуск browser-sync         
+gulp server - запуск browser-sync   
+
+gulp images - сжимаем картинки    
             
 gulp svgSpriteBuild - сборка svg-спрайта 
 ```            
