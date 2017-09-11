@@ -8,12 +8,12 @@
     height: 141px;
     border-radius: 50%;
     overflow: hidden;
+    margin-bottom: 30px;
 
     &-pic{
       width: 100%;
       height: 100%;
       background-size: cover;
-
     }
   }
 
@@ -22,6 +22,7 @@
     font-family: Roboto;
     font-size: 28px;
     font-weight: 500;
+    margin-bottom: 8px;
   }
 
   &__site-desc {

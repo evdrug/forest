@@ -40,17 +40,23 @@
                 </label>
               </div>
               <div class="form__check">
-                <label class="form__check-label">
-                  <input class="form__checkbox" type="checkbox" name="robot" value="0">Я человек
+                <label class="form__label-check">
+                  <input class="form__checkbox" type="checkbox" name="robot" value="0">
+                  <div class="form__checkbox-fake"></div>
+                  <div class="form__box-text">Я человек</div>
                 </label>
               </div>
               <div class="form__radio-title">Вы точно не робот?</div>
               <div class="form__radio">
-                <label class="form__radio-label">
-                  <input class="form_radio-btn" type="radio" name="robot" value="no">Да
+                <label class="form__label-check">
+                  <input class="form_radio-btn" type="radio" name="robot" value="no">
+                  <div class="form__radio-fake"></div>
+                  <div class="form__box-text">Да</div>
                 </label>
-                <label class="form__radio-label">
-                  <input class="form_radio-btn" type="radio" name="robot" value="yes">Не уверен
+                <label class="form__label-check">
+                  <input class="form_radio-btn" type="radio" name="robot" value="yes">
+                  <div class="form__radio-fake"></div>
+                  <div class="form__box-text">Не уверен</div>
                 </label>
               </div>
               <ul class="form__btn-list">
@@ -68,9 +74,24 @@
             <div class="welcom__menu-soc">
               <div class="menu-soc">
                 <ul class="menu-soc__list">
-                  <li class="menu-soc__item"><a class="menu-soc__link" href="#">vk</a></li>
-                  <li class="menu-soc__item"><a class="menu-soc__link" href="#">git</a></li>
-                  <li class="menu-soc__item"><a class="menu-soc__link" href="#">in</a></li>
+                  <li class="menu-soc__item"><a class="menu-soc__link" href="#">
+                      <div class="menu-soc__pic">
+                        <svg class="vk">
+                        <use xlink:href="./images/svg/symbols.svg#vk"></use>
+                        </svg>
+                      </div>vk</a></li>
+                  <li class="menu-soc__item"><a class="menu-soc__link" href="#">
+                      <div class="menu-soc__pic">
+                        <svg class="git">
+                        <use xlink:href="./images/svg/symbols.svg#github"></use>
+                        </svg>
+                      </div>git</a></li>
+                  <li class="menu-soc__item"><a class="menu-soc__link" href="#">
+                      <div class="menu-soc__pic">
+                        <svg class="in">
+                        <use xlink:href="./images/svg/symbols.svg#in"></use>
+                        </svg>
+                      </div>in</a></li>
                 </ul>
               </div>
             </div>

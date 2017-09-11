@@ -38,6 +38,10 @@ const paths = {
     images: {
         src: 'src/images/**/*.*',
         dest: 'dst/images/'
+    },
+    fonts: {
+        src: 'src/fonts/woff/**/*.woff',
+        dst: 'dst/fonts/'
     }
 };
 
@@ -106,7 +110,10 @@ function scriptsMin() {
 }
 
 
-
+function fonts() {
+    return gulp.src(paths.fonts.src)
+        .pipe(gulp.dest(paths.fonts.dst))
+}
 
 function svgSpriteBuild () {
     return gulp.src('./src/images/**/*.svg')
@@ -161,6 +168,7 @@ exports.images = images;
 exports.styles = styles;
 exports.styles2 = styles2;
 exports.scripts = scripts;
+exports.fonts = fonts;
 exports.scriptsMin = scriptsMin;
 exports.svgSpriteBuild = svgSpriteBuild;
 exports.server = server;
@@ -177,5 +185,5 @@ gulp.task('default', gulp.series(
 
 gulp.task('build', gulp.series(
     gulp.series(clearDst),
-    gulp.parallel(styles, scriptsMin, templates, images, svgSpriteBuild)
+    gulp.parallel(styles, scriptsMin, templates, fonts, images, svgSpriteBuild)
 ));

@@ -33,18 +33,21 @@ block content
                                     |</svg>
                                 input.form__input-text(type="password" value="" name="pass" placeholder="Пароль")
                         .form__check
-                            label.form__check-label
+                            label.form__label-check
                                 input.form__checkbox(type="checkbox" name="robot" value="0")
-                                | Я человек
+                                .form__checkbox-fake
+                                .form__box-text| Я человек
                         .form__radio-title
                             |Вы точно не робот?
                         .form__radio
-                            label.form__radio-label
+                            label.form__label-check
                                 input.form_radio-btn(type="radio" name="robot" value="no")
-                                | Да
-                            label.form__radio-label
+                                .form__radio-fake
+                                .form__box-text| Да
+                            label.form__label-check
                                 input.form_radio-btn(type="radio" name="robot" value="yes")
-                                | Не уверен
+                                .form__radio-fake
+                                .form__box-text| Не уверен
                         ul.form__btn-list
                             li.form__btn-item
                                 a.form__btn-link.index(href="")|На главную
