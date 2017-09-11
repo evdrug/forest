@@ -40,7 +40,7 @@ const paths = {
         dest: 'dst/images/'
     },
     fonts: {
-        src: 'src/fonts/woff/**/*.woff',
+        src: 'src/fonts/**/*.woff',
         dst: 'dst/fonts/'
     }
 };
