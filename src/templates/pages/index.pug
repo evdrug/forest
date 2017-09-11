@@ -1,38 +1,68 @@
 extends ../template
 
+
 block variables
     - var title = 'Добро пожаловать'
+
 
 block content
     .wrapper
         .container-index
-            .form
-                form.form__container
-                    .form__title
-                        |Авторизуйтесь
-                    .form__line
-                        .line
-                    .form__input
-                        .form__img.user
-                        input.form__input(type="text" value="" name="name" placeholder="Логин")
-                    .form__input
-                        .form__img.key
-                        input.form__input(type="password" value="" name="pass" placeholder="Пароль")
-                    .form__check
-                        label.form__check-label
-                            input.form__checkbox(type="checkbox" name="robot" value="0")
-                            | Я человек
-                    .form__radio-title
-                        |Вы точно не робот?
-                    .form__radio
-                        label.form__radio-label
-                            input.form_radio-btn(type="radio" name="robot" value="no")
-                            | Да
-                        label.form__radio-label
-                            input.form_radio-btn(type="radio" name="robot" value="yes")
-                            | Не уверен
-                    ul.form__btn-list
-                        li.form__btn-item
-                            a.form__btn-link.index(href="")|На главную
-                        li.form__btn-item
-                            a.form__btn-link.login(href="")|Войти
+            a.btn-singin(href="")|Авторизоваться
+
+
+            .wrapper__form
+                .form
+                    form.form__container
+                        .form__title
+                            |Авторизуйтесь
+                        .form__line
+                            .line
+                        .form__input
+                            label.form__input-label
+                                .form__img
+                                    | <svg class="form__img-login">
+                                    | <use xlink:href="./images/svg/symbols.svg#login"></use>
+                                    | </svg>
+                                input.form__input-text(type="text" value="" name="name" placeholder="Логин")
+                        .form__input
+                            label.form__input-label
+                                .form__img.key
+                                    |<svg class="form__img-password">
+                                    |<use xlink:href="./images/svg/symbols.svg#password"></use>
+                                    |</svg>
+                                input.form__input-text(type="password" value="" name="pass" placeholder="Пароль")
+                        .form__check
+                            label.form__check-label
+                                input.form__checkbox(type="checkbox" name="robot" value="0")
+                                | Я человек
+                        .form__radio-title
+                            |Вы точно не робот?
+                        .form__radio
+                            label.form__radio-label
+                                input.form_radio-btn(type="radio" name="robot" value="no")
+                                | Да
+                            label.form__radio-label
+                                input.form_radio-btn(type="radio" name="robot" value="yes")
+                                | Не уверен
+                        ul.form__btn-list
+                            li.form__btn-item
+                                a.form__btn-link.index(href="")|На главную
+                            li.form__btn-item
+                                a.form__btn-link.login(href="")|Войти
+                .welcom
+                    .user
+                        include ../module/user
+                    .welcom__menu-soc
+                        include ../module/menuSoc
+                    .menu-site
+                        ul.form__btn-list
+                            li.form__btn-item
+                                a.form__btn-link(href="./works.html")
+                                    |Мои работы
+                            li.form__btn-item
+                                a.form__btn-link(href="./about.html")
+                                    |Обо мне
+                            li.form__btn-item
+                                a.form__btn-link(href="./blog.html")
+                                    |Блог
