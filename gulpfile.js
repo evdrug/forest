@@ -51,6 +51,11 @@ function templates() {
         .pipe(gulp.dest(paths.root));
 }
 
+function favicon() {
+    return gulp.src('./src/images/*.ico')
+        .pipe(gulp.dest(paths.root));
+}
+
 function images() {
     return gulp.src('./src/images/**/*.{jpg,png}')
         // .pipe(responsive({
@@ -165,6 +170,7 @@ function watch() {
 
 exports.templates = templates;
 exports.images = images;
+exports.favicon = favicon;
 exports.styles = styles;
 exports.styles2 = styles2;
 exports.scripts = scripts;
@@ -185,5 +191,5 @@ gulp.task('default', gulp.series(
 
 gulp.task('build', gulp.series(
     gulp.series(clearDst),
-    gulp.parallel(styles, scriptsMin, templates, fonts, images, svgSpriteBuild)
+    gulp.parallel(styles, scriptsMin, templates, favicon, fonts, images, svgSpriteBuild)
 ));
