@@ -7,65 +7,66 @@ block variables
 
 block content
     .wrapper
-        .container-index
+        .container-page
             a.btn-singin(href="")|Авторизоваться
 
-
-            .wrapper__form
-                .form
-                    form.form__container
-                        .form__title
-                            |Авторизуйтесь
-                        .form__line
-                            .line
-                        .form__input
-                            label.form__input-label
-                                .form__img
-                                    | <svg class="form__img-login">
-                                    | <use xlink:href="./images/svg/symbols.svg#login"></use>
-                                    | </svg>
-                                input.form__input-text(type="text" value="" name="name" placeholder="Логин")
-                        .form__input
-                            label.form__input-label
-                                .form__img.key
-                                    |<svg class="form__img-password">
-                                    |<use xlink:href="./images/svg/symbols.svg#password"></use>
-                                    |</svg>
-                                input.form__input-text(type="password" value="" name="pass" placeholder="Пароль")
-                        .form__check
-                            label.form__label-check
-                                input.form__checkbox(type="checkbox" name="robot" value="0")
-                                .form__checkbox-fake
-                                .form__box-text| Я человек
-                        .form__radio-title
-                            |Вы точно не робот?
-                        .form__radio
-                            label.form__label-check
-                                input.form_radio-btn(type="radio" name="robot" value="no")
-                                .form__radio-fake
-                                .form__box-text| Да
-                            label.form__label-check
-                                input.form_radio-btn(type="radio" name="robot" value="yes")
-                                .form__radio-fake
-                                .form__box-text| Не уверен
-                        ul.form__btn-list
-                            li.form__btn-item
-                                a.form__btn-link.index(href="")|На главную
-                            li.form__btn-item
-                                a.form__btn-link.login(href="")|Войти
-                .welcome
-                    .user
-                        include ../module/user
-                    .welcome__menu-soc
-                        include ../module/menuSoc
-                    .menu-site
-                        ul.form__btn-list
-                            li.form__btn-item
-                                a.form__btn-link(href="./works.html")
-                                    |Мои работы
-                            li.form__btn-item
-                                a.form__btn-link(href="./about.html")
-                                    |Обо мне
-                            li.form__btn-item
-                                a.form__btn-link(href="./blog.html")
-                                    |Блог
+            .container-avtorization
+                .wrapper__form
+                    .form
+                        form.form__container
+                            .form__title
+                                |Авторизуйтесь
+                            .form__line
+                                .line
+                            .form__input
+                                label.form__input-label
+                                    .form__img
+                                        | <svg class="form__img-login">
+                                        | <use xlink:href="./images/svg/symbols.svg#login"></use>
+                                        | </svg>
+                                    input.form__input-text(type="text" value="" name="name" placeholder="Логин")
+                            .form__input
+                                label.form__input-label
+                                    .form__img.key
+                                        |<svg class="form__img-password">
+                                        |<use xlink:href="./images/svg/symbols.svg#password"></use>
+                                        |</svg>
+                                    input.form__input-text(type="password" value="" name="pass" placeholder="Пароль")
+                            .form__check
+                                label.form__label-check
+                                    input.form__checkbox(type="checkbox" name="robot" value="0")
+                                    .form__checkbox-fake
+                                    .form__box-text| Я человек
+                            .form__radio-title
+                                |Вы точно не робот?
+                            .form__radio
+                                label.form__label-check
+                                    input.form_radio-btn(type="radio" name="robot" value="no")
+                                    .form__radio-fake
+                                    .form__box-text| Да
+                                label.form__label-check
+                                    input.form_radio-btn(type="radio" name="robot" value="yes")
+                                    .form__radio-fake
+                                    .form__box-text| Не уверен
+                            ul.form__btn-list
+                                li.form__btn-item
+                                    a.form__btn-link.index(href="")|На главную
+                                li.form__btn-item
+                                    a.form__btn-link.login(href="")|Войти
+                    .welcome
+                        .user
+                            include ../module/user
+                        .welcome__menu-soc
+                            include ../module/menuSoc
+                        .menu-site
+                            ul.form__btn-list
+                                li.form__btn-item
+                                    a.form__btn-link(href="./works.html")
+                                        |Мои работы
+                                li.form__btn-item
+                                    a.form__btn-link(href="./about.html")
+                                        |Обо мне
+                                li.form__btn-item
+                                    a.form__btn-link(href="./blog.html")
+                                        |Блог
+    include ../module/footer-user

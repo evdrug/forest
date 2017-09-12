@@ -1,16 +1,18 @@
 
 block header
     header.header
-        nav.header__menu
-            include ./menuSoc
+        .container-page
+            .header__menu
+                include ./menuSoc
 
-            .menu-hamburger
+                .menu-hamburger
 
-        .header__block
-            .header__img
-            h1
-                |#{header__title}
-            .line
-            .header__title
-                |#{header__info}
-                
+        .header__footer-pic
+            .header__block-left
+                |<svg class="block-left" viewBox="0 0 1000 225" preserveAspectRatio="none">
+                |<polygon points="0,0 0,225 1000,225 1000,155"></polygon>
+                |</svg>
+            .header__block-right
+                |<svg class="block-right" viewBox="0 0 1000 225" preserveAspectRatio="none">
+                |<polygon points="0,225 1000,225 1000,0 0,155"></polygon>
+                |</svg>
