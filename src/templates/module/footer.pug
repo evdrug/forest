@@ -1,28 +1,34 @@
+
 footer.footer
-    .container-page
-        .footer__block
-            .footer__text
-                |Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
-        .footer__block
-            .footer__nav
-                ul.nav__list
-                    li.nav__items
-                        a.nav__link(href="works.html")
-                            |Мои работы
-                    li.nav__items
-                        a.nav__link(href="about.html")
-                            |Обо мне
-                    li.nav__items
-                        a.nav__link(href="blog.html")
-                            |Блог
-                    li.nav__items
-                        a.nav__link(href="index.html")
-                            |Авторизация
+    .container
+        .footer__container
+            .footer__block
+                .footer__text-left
+                    |Этот сайт я сделал в рамках обучения в Школе онлайн образования&nbsp;
+                    a(href="https://loftschool.com" class ="loft-link" target="_blanc")| LoftSchool
+                    |&nbsp;.
+            .footer__block
+                .footer__nav
+                    ul.nav__list
+                        li.nav__items
+                            a.nav__link(href="works.html")
+                                |Мои работы
+                        li.nav__items
+                            a.nav__link(href="about.html")
+                                |Обо мне
+                        li.nav__items
+                            a.nav__link(href="blog.html")
+                                |Блог
+                        li.nav__items
+                            a.nav__link(href="index.html")
+                                |Авторизация
 
-            .footer__menu-soc
-                include ../module/menuSoc
+                .footer__menu-soc
+                    include ../module/menuSoc
 
-        .footer__block
-            .footer__text
-                | Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
-                | — Martin Golding
+            .footer__block
+                .footer__text-right
+                    span.text-i| Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
+                    span.text-i-bold| — Martin Golding
+.footer__foot
+    include ../module/footer-user
