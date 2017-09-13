@@ -6,69 +6,78 @@ block variables
 
 
 block content
-    .wrapper
-        .container-page
-            a.btn-singin(href="")|Авторизоваться
-
-            .container-avtorization
-                .wrapper__form
-                    .form
-                        form.form__container
-                            .form__title
-                                |Авторизуйтесь
-                            .form__line
-                                .line
-                            .form__input
-                                label.form__input-label
-                                    .form__img
-                                        | <svg class="form__img-login">
-                                        | <use xlink:href="./images/svg/symbols.svg#login"></use>
-                                        | </svg>
-                                    input.form__input-text(type="text" value="" name="name" placeholder="Логин")
-                            .form__input
-                                label.form__input-label
-                                    .form__img.key
-                                        |<svg class="form__img-password">
-                                        |<use xlink:href="./images/svg/symbols.svg#password"></use>
-                                        |</svg>
-                                    input.form__input-text(type="password" value="" name="pass" placeholder="Пароль")
-                            .form__check
-                                label.form__label-check
-                                    input.form__checkbox(type="checkbox" name="robot" value="0")
-                                    .form__checkbox-fake
-                                    .form__box-text| Я человек
-                            .form__radio-title
+    .wrapper-img
+        .container-pages.welcome
+            .welcome__btn-avt
+                .btn-avt|Авторизоваться
+            .welcome__form
+                .welcome__form-user
+                    .user
+                        .user__img
+                            img.user__img-pic
+                        .user__title
+                            |Друзьякин Евгений
+                        .user__text
+                            |Личный сайт веб разработчика
+                .welcome__form-social
+                    include ../module/social
+                .welcome__form-menu
+                    .menu-avt
+                        ul.menu-avt__list
+                            li.menu-avt__items
+                                a.menu-avt__link(href="#")
+                                    |Мои работы
+                            li.menu-avt__items
+                                a.menu-avt__link(href="#")
+                                    |Обо мне
+                            li.menu-avt__items
+                                a.menu-avt__link(href="#")
+                                    |Блог
+            .welcome__avt.avt
+                .avt__title
+                    .name-content
+                        |Авторизуйтесь
+                .avt__form
+                    form.form
+                        .form__row
+                            label.form__label-input
+                                .form__pic
+                                    |<svg class="form__img-login">
+                                    |<use xlink:href="./images/svg/symbols.svg#login"></use>
+                                    |</svg>
+                                input.fotm__login(type="text" placeholder="Логин")
+                        .form__row
+                            label.form__label-input
+                                .form__pic
+                                    |<svg class="form__img-login">
+                                    | <use xlink:href="./images/svg/symbols.svg#password"></use>
+                                    | </svg>
+                                input.fotm__pass(type="text" placeholder="Пароль")
+                        .form__row
+                            label.form__label-checkbox
+                                input.fotm__check(type="checkbox")
+                                .form__check-fake
+                                |Я человек
+                        .form__row.radio
+                            .radio__title
                                 |Вы точно не робот?
-                            .form__radio
-                                label.form__label-check
-                                    input.form_radio-btn(type="radio" name="robot" value="no")
-                                    .form__radio-fake
-                                    .form__box-text| Да
-                                label.form__label-check
-                                    input.form_radio-btn(type="radio" name="robot" value="yes")
-                                    .form__radio-fake
-                                    .form__box-text| Не уверен
-                            ul.form__btn-list
-                                li.form__btn-item
-                                    a.form__btn-link.index(href="")|На главную
-                                li.form__btn-item
-                                    a.form__btn-link.login(href="")|Войти
-                    .welcome
-                        .user
-                            include ../module/user
-                        .welcome__menu-soc
-                            include ../module/menuSoc
-                        .menu-site
-                            ul.form__btn-list
-                                li.form__btn-item
-                                    a.form__btn-link(href="./works.html")
-                                        |Мои работы
-                                li.form__btn-item
-                                    a.form__btn-link(href="./about.html")
-                                        |Обо мне
-                                li.form__btn-item
-                                    a.form__btn-link(href="./blog.html")
-                                        |Блог
+                            .radio__label
+                                input.radio__btn(type="radio" name="robot" value="no")
+                                .radio__btn-fake
+                                |Да
+                            .radio__label
+                                input.radio__btn(type="radio" name="robot" value="yes")
+                                .radio__btn-fake
+                                |Не уверен
+                            .form__menu
+                                .menu-avt
+                                    ul.menu-avt__list
+                                        li.menu-avt__items
+                                            a.menu-avt__link(href="#")
+                                                |На главную
+                                        li.menu-avt__items
+                                            a.menu-avt__link(href="#")
+                                                |Войти
 
-    .footer-user
-        include ../module/footer-user
+            .welcome__footer.user-footer
+                |© Друзьякин Евгений | создано с любовью в LoftSchool | 2017
