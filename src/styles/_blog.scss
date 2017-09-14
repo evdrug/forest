@@ -1,5 +1,4 @@
 .header {
-  flex-shrink: 0;
   width: 100%;
   height: 513px;
 
@@ -28,6 +27,14 @@
 
 }
 
+.header__btn {
+  position: absolute;
+  top: 400px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
 .user__info {
   color: #ffffff;
   font-weight: 400;
@@ -36,7 +43,7 @@
 .content {
   position: relative;
   width: 100%;
-  flex: 1;
+  flex-grow: 1;
 }
 
 .block-triangle {
@@ -65,7 +72,7 @@
 }
 
 .block-left{
-  width: 400px;
+  max-width: 400px;
   margin-right: 110px;
 }
 
@@ -78,7 +85,7 @@
 
 .nav-article__items {
   text-align: right;
-  width:280px;
+  max-width:280px;
   padding-top:  15px;
   padding-bottom: 15px;
   border-right: 3px solid transparent;
@@ -188,6 +195,7 @@
   list-style: none;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .menu__items {
@@ -229,7 +237,8 @@
 
 .info {
   color: #ffffff;
-  width: 370px;
+  //width: 370px;
+  max-width:370px;
   font-weight: 300;
 }
 
