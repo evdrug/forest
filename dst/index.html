@@ -14,106 +14,113 @@
     <div class="wrapper-page">
       <div class="wrapper-img">
         <div class="container-pages welcome">
-          <div class="welcome__btn-avt">
-            <div class="btn-avt">Авторизоваться</div>
-          </div>
-          <div class="welcome__form">
-            <div class="welcome__form-user">
-              <div class="user">
-                <div class="user__img"><img class="user__img-pic"></div>
-                <div class="user__title">Друзьякин Евгений</div>
-                <div class="user__text">Личный сайт веб разработчика</div>
+          <div class="welcome__btn-avt"><a class="btn-avt" href="">Авторизоваться</a></div>
+          <div class="welcome__form-wrapper">
+            <div class="welcome__form">
+              <div class="welcome__form-user">
+                <div class="user">
+                  <div class="user__img"><img class="user__img-pic" src="./images/user2.jpg"></div>
+                  <div class="user__title">Друзьякин Евгений</div>
+                  <div class="user__text">Личный сайт веб разработчика</div>
+                </div>
+              </div>
+              <div class="welcome__form-social">
+                <div class="social">
+                  <ul class="social__list">
+                    <li class="social__items"><a class="social__link" href="#" target="_blanc">
+                        <div class="social__link-pic">
+                          <svg class="vk">
+                          <use xlink:href="./images/svg/symbols.svg#vk"></use>
+                          </svg>
+                        </div>
+                        <div class="social__link-text">vk</div></a></li>
+                    <li class="social__items"><a class="social__link" href="#" target="_blanc">
+                        <div class="social__link-pic">
+                          <svg class="git">
+                          <use xlink:href="./images/svg/symbols.svg#github"></use>
+                          </svg>
+                        </div>
+                        <div class="social__link-text">git</div></a></li>
+                    <li class="social__items"><a class="social__link" href="#" target="_blanc">
+                        <div class="social__link-pic">
+                          <svg class="in">
+                          <use xlink:href="./images/svg/symbols.svg#in"></use>
+                          </svg>
+                        </div>
+                        <div class="social__link-text">in</div></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="welcome__form-menu">
+                <div class="menu-avt">
+                  <ul class="menu-avt__list">
+                    <li class="menu-avt__items"><a class="menu-avt__link" href="works.html">Мои работы</a></li>
+                    <li class="menu-avt__items"><a class="menu-avt__link" href="about.html">Обо мне</a></li>
+                    <li class="menu-avt__items"><a class="menu-avt__link" href="blog.html">Блог</a></li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <div class="welcome__form-social">
-              <div class="social">
-                <ul class="social__list">
-                  <li class="social__items"><a class="social__link" href="#" target="_blanc">
-                      <div class="social__link-pic">
-                        <svg class="vk">
-                        <use xlink:href="./images/svg/symbols.svg#vk"></use>
-                        </svg>
+            <div class="welcome__avt">
+              <div class="avt">
+                <div class="avt__title">
+                  <div class="name-content">Авторизуйтесь</div>
+                </div>
+                <div class="avt__form">
+                  <form class="form">
+                    <div class="form__row">
+                      <label class="form__label-input">
+                        <div class="form__pic">
+                          <svg class="form__img-login">
+                          <use xlink:href="./images/svg/symbols.svg#login"></use>
+                          </svg>
+                        </div>
+                        <input class="fotm__input-text" type="text" placeholder="Логин">
+                      </label>
+                    </div>
+                    <div class="form__row">
+                      <label class="form__label-input">
+                        <div class="form__pic">
+                          <svg class="form__img-login">
+                          <use xlink:href="./images/svg/symbols.svg#password"></use>
+                          </svg>
+                        </div>
+                        <input class="fotm__input-text" type="text" placeholder="Пароль">
+                      </label>
+                    </div>
+                    <div class="form__row">
+                      <label class="form__label-checkbox">
+                        <input class="fotm__check" type="checkbox">
+                        <div class="form__check-fake"></div>
+                        <div class="form__check-text">Я человек</div>
+                      </label>
+                    </div>
+                    <div class="form__row radio">
+                      <div class="radio__title">Вы точно не робот?</div>
+                      <div class="radio__row">
+                        <label class="radio__label">
+                          <input class="radio__btn" type="radio" name="robot" value="no">
+                          <div class="radio__btn-fake"></div>
+                          <div class="radio__text">Да</div>
+                        </label>
+                        <label class="radio__label">
+                          <input class="radio__btn" type="radio" name="robot" value="yes">
+                          <div class="radio__btn-fake"></div>
+                          <div class="radio__text">Не уверен</div>
+                        </label>
                       </div>
-                      <div class="social__link-text">vk</div></a></li>
-                  <li class="social__items"><a class="social__link" href="#" target="_blanc">
-                      <div class="social__link-pic">
-                        <svg class="git">
-                        <use xlink:href="./images/svg/symbols.svg#github"></use>
-                        </svg>
+                    </div>
+                    <div class="form__menu">
+                      <div class="menu-avt">
+                        <ul class="menu-avt__list">
+                          <li class="menu-avt__items"><a class="menu-avt__link index" href="#">На главную</a></li>
+                          <li class="menu-avt__items"><a class="menu-avt__link signin" href="#">Войти</a></li>
+                        </ul>
                       </div>
-                      <div class="social__link-text">git</div></a></li>
-                  <li class="social__items"><a class="social__link" href="#" target="_blanc">
-                      <div class="social__link-pic">
-                        <svg class="in">
-                        <use xlink:href="./images/svg/symbols.svg#in"></use>
-                        </svg>
-                      </div>
-                      <div class="social__link-text">in</div></a></li>
-                </ul>
+                    </div>
+                  </form>
+                </div>
               </div>
-            </div>
-            <div class="welcome__form-menu">
-              <div class="menu-avt">
-                <ul class="menu-avt__list">
-                  <li class="menu-avt__items"><a class="menu-avt__link" href="#">Мои работы</a></li>
-                  <li class="menu-avt__items"><a class="menu-avt__link" href="#">Обо мне</a></li>
-                  <li class="menu-avt__items"><a class="menu-avt__link" href="#">Блог</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="welcome__avt avt">
-            <div class="avt__title">
-              <div class="name-content">Авторизуйтесь</div>
-            </div>
-            <div class="avt__form">
-              <form class="form">
-                <div class="form__row">
-                  <label class="form__label-input">
-                    <div class="form__pic">
-                      <svg class="form__img-login">
-                      <use xlink:href="./images/svg/symbols.svg#login"></use>
-                      </svg>
-                    </div>
-                    <input class="fotm__login" type="text" placeholder="Логин">
-                  </label>
-                </div>
-                <div class="form__row">
-                  <label class="form__label-input">
-                    <div class="form__pic">
-                      <svg class="form__img-login">
-                      <use xlink:href="./images/svg/symbols.svg#password"></use>
-                      </svg>
-                    </div>
-                    <input class="fotm__pass" type="text" placeholder="Пароль">
-                  </label>
-                </div>
-                <div class="form__row">
-                  <label class="form__label-checkbox">
-                    <input class="fotm__check" type="checkbox">
-                    <div class="form__check-fake"></div>Я человек
-                  </label>
-                </div>
-                <div class="form__row radio">
-                  <div class="radio__title">Вы точно не робот?</div>
-                  <div class="radio__label">
-                    <input class="radio__btn" type="radio" name="robot" value="no">
-                    <div class="radio__btn-fake"></div>Да
-                  </div>
-                  <div class="radio__label">
-                    <input class="radio__btn" type="radio" name="robot" value="yes">
-                    <div class="radio__btn-fake"></div>Не уверен
-                  </div>
-                  <div class="form__menu">
-                    <div class="menu-avt">
-                      <ul class="menu-avt__list">
-                        <li class="menu-avt__items"><a class="menu-avt__link" href="#">На главную</a></li>
-                        <li class="menu-avt__items"><a class="menu-avt__link" href="#">Войти</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </form>
             </div>
           </div>
           <div class="welcome__footer user-footer">© Друзьякин Евгений | создано с любовью в LoftSchool | 2017</div>

@@ -5,10 +5,13 @@ block variables
     - var header__title = 'обо мне'
     - var header__info = 'Личный сайт веб разработчика'
 
-block header
-    include ../module/header
-
 block content
-    .container-page
+    section.header
+        .container
+            .header__social
+                include ../module/social
+            .header__menu
+                .hamburger
+
 block footer
     include ../module/footer
