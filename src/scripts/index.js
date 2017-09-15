@@ -1,3 +1,6 @@
+    import './map'
+
+
 var btnAvt = document.getElementsByClassName('btn-avt'),
     blockAvt = document.getElementsByClassName('welcome__form-wrapper'),
     btnIndex = document.getElementsByClassName('index');
@@ -18,3 +21,4 @@ btnIndex.onclick = function (e) {
     blockAvt.classList.remove('flipped')
     btnAvt.classList.remove('none');
 }
+

@@ -1,0 +1,58 @@
+.section__maps {
+  width: 100%;
+  height: 1114px;
+}
+.map {
+  height: 100%;
+  width: 100%;
+}
+
+.block-triangle__left_color .triangle-left {
+  fill:#ecf0e3;
+}
+
+.section__block-left_color-poz {
+  background-color: #ecf0e3;
+}
+
+.name-content_sz{
+  font-size: 63px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+
+.section__block-left_color-poz {
+  justify-content: flex-end;
+  align-items:flex-start;
+  position: relative;
+}
+.logo-page{
+  position: absolute;
+  top: -30px;
+  left: 140px;
+
+}
+.about {
+  max-width: 437px;
+  margin-bottom: 45px;
+  padding-right: 20px;
+
+}
+
+.about__img {
+  margin-bottom: 41px;
+}
+.about__img-pic {
+  display: block;
+  max-width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.name-content_sz{
+  font-size: 63px;
+  font-weight: 400;
+  white-space: nowrap;
+}

@@ -6,62 +6,100 @@ block variables
     - var header__info = 'Личный сайт веб разработчика'
 
 block content
-    section.header
-        .container
-            .header__social
-                include ../module/social
-            .header__menu
-                .hamburger
-            .header__user
-                .user
-                    .user__img
-                        img.user__img-pic(src="./images/user2.jpg")
-                    .name-content
-                        | #{title}
-                    .user__info
-                        | Статьи, которые я написал
-    main.content
-        .block-triangle
-            .block-triangle__left
-                | <svg class="triangle-left" viewBox="0 0 1000 225" preserveAspectRatio="none">
-                | <polygon points="0,0 0,225 1000,225 1000,155"></polygon>
-                | </svg>
-            .block-triangle__right
-                | <svg class="triangle-right" viewBox="0 0 1000 225" preserveAspectRatio="none">
-                | <polygon points="0,225 1000,225 1000,0 0,155"></polygon>
-                | </svg>
-        .container
-            .container-page
-
-    footer.footer
-        .footer__up
+    .reviews-page
+        section.header
             .container
-                .container-footer
-                    .footer__block
-                        .info
-                            | Этот сайт я сделал в рамках обучения в Школе онлайн образования &nbsp;
-                            a.info__link(href="")|LoftSchool
-                            | &nbsp;.
-                    .footer__block
-                        .footer__menu
-                            ul.menu__list
-                                li.menu__items
-                                    a.menu__link(href="works.html")
-                                        | Мои работы
-                                li.menu__items
-                                    a.menu__link(href="about.html")
-                                        | Обо мне
-                                li.menu__items
-                                    a.menu__link(href="blog.html")
-                                        | Блог
-                                li.menu__items
-                                    a.menu__link(href="index.html")
-                                        | Авторизация
-                        .footer__social
-                            include ../module/social
-                    .footer__block
-                        .text-quote
-                            | Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
-                            .text-quote__autor| — Martin Golding
-        .footer__down.user-footer
-            | © Друзьякин Евгений | создано с любовью в LoftSchool | 2017
+                .header__social
+                    include ../module/social
+                .header__menu
+                    .hamburger
+                .header__user
+                    .user
+                        .user__img
+                            img.user__img-pic(src="./images/user2.jpg")
+                        .user__info
+                            | #{header__info}
+                .header__btn
+                    a.btn-arrow(href="#")
+                        | <svg class="form__img-login">
+                        | <use xlink:href="./images/svg/symbols.svg#portf_arrow_down"></use>
+                        | </svg>
+
+        main.content
+            .block-triangle
+                .block-triangle__left.block-triangle__left_color
+                    | <svg class="triangle-left" viewBox="0 0 1000 225" preserveAspectRatio="none">
+                    | <polygon points="0,0 0,225 1000,225 1000,155"></polygon>
+                    | </svg>
+                .block-triangle__right
+                    | <svg class="triangle-right" viewBox="0 0 1000 225" preserveAspectRatio="none">
+                    | <polygon points="0,225 1000,225 1000,0 0,155"></polygon>
+                    | </svg>
+
+            .block
+
+                section.section__block-left.section__block-left_color-poz
+                    .logo-page
+                        .name-content.name-content_color.name-content_sz
+                            | #{title}
+                    .about
+                        .about__img
+                            img.about__img-pic(style="background-image: url('./images/user2.jpg')" src="./images/user2.jpg")
+                        .about__body
+                            .about__title
+                                .name-content.name-content_color.name-content_color-bg
+                                    |Кто я
+                            .about__text
+                                p| Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                                p| Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
+
+
+                section.section__block-right
+                    .slider-works
+                        .slider-works__body
+                            img.slider-works__img(src="./images/content/bg-1.jpg")
+                        .slider-works__menu
+                            .slider-works__prev-img
+                                img.slider-works__img-pic(src="./images/content/bg-2.jpg")
+
+                            .slider-works__next-img
+                                img.slider-works__img-pic(src="./images/content/bg-3.jpg")
+
+
+        section.section__maps
+                .map#map
+
+
+
+        footer.footer
+            .footer__up
+                .container
+                    .container-footer
+                        .footer__block
+                            .info
+                                | Этот сайт я сделал в рамках обучения в Школе онлайн образования &nbsp;
+                                a.info__link(href="")|LoftSchool
+                                | &nbsp;.
+                        .footer__block
+                            .footer__menu
+                                ul.menu__list
+                                    li.menu__items
+                                        a.menu__link(href="works.html")
+                                            | Мои работы
+                                    li.menu__items
+                                        a.menu__link(href="about.html")
+                                            | Обо мне
+                                    li.menu__items
+                                        a.menu__link(href="blog.html")
+                                            | Блог
+                                    li.menu__items
+                                        a.menu__link(href="index.html")
+                                            | Авторизация
+                            .footer__social
+                                include ../module/social
+                        .footer__block
+                            .text-quote
+                                | Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
+                                .text-quote__autor| — Martin Golding
+            .footer__down.user-footer
+                | © Друзьякин Евгений | создано с любовью в LoftSchool | 2017
