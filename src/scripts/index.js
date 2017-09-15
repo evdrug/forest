@@ -1,4 +1,4 @@
-    import './map'
+import './map'
 
 
 var btnAvt = document.getElementsByClassName('btn-avt'),
@@ -21,4 +21,5 @@ btnIndex.onclick = function (e) {
     blockAvt.classList.remove('flipped')
     btnAvt.classList.remove('none');
 }
+
 

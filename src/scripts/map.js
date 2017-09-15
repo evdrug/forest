@@ -4,7 +4,7 @@ var map;
 
 
 
-initMap();
+
 function initMap() {
 
     var pos = {lat: 59.937763, lng: 30.218649};
@@ -30,3 +30,5 @@ function initMap() {
 
     map.setOptions({styles: styles});
 }
+
+initMap();
