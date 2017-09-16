@@ -13,6 +13,8 @@ block content
                     include ../module/social
                 .header__menu
                     .hamburger
+                        a.hamburger__link(href="")
+                            .hamburger__img
                 .header__user
                     .user
                         .user__img
@@ -40,26 +42,29 @@ block content
                     .works-wrapper
                         .name-content.name-content_color
                             |#{title}
-                    .block
-                        section.section__block-left
-                            .school
-                                .school__title
-                                    .name-content.name-content_color
-                                        |Сайт школы онлайн
-                                        |Образования
-                                .school__text
-                                    |HTML , CSS, JAVASCRIPT
-                                .scholl__link-wrapper
-                                    a.scholl__link(href="" target="_blanc")
-                                        |Посмотреть сайт
-                                        .scholl__link-img
-                                            | <svg class="scholl-img">
-                                            | <use xlink:href="./images/svg/symbols.svg#link"></use>
-                                            | </svg>
-                        section.section__block-right
-                            .slider-works
-                                .slider-works__body
-                                    img.slider-works__img(src="./images/content/bg-1.jpg")
+                    .wrapper-block
+                         .block
+                            section.section__block-1
+                                .school
+                                    .school__title
+                                        .name-content.name-content_color
+                                            |Сайт школы онлайн
+                                            |Образования
+                                    .school__text
+                                        |HTML , CSS, JAVASCRIPT
+                                    .scholl__link-wrapper
+                                        a.scholl__link(href="" target="_blanc")
+                                            |Посмотреть сайт
+                                            .scholl__link-img
+                                                | <svg class="scholl-img">
+                                                | <use xlink:href="./images/svg/symbols.svg#link"></use>
+                                                | </svg>
+                            section.section__block-2
+                                .slider-works
+                                    .slider-works__body
+                                        img.slider-works__img(src="./images/content/bg-1.jpg")
+
+                            section.section__block-3
                                 .slider-works__menu
                                     .slider-works__prev-img
                                         img.slider-works__img-pic(src="./images/content/bg-2.jpg")

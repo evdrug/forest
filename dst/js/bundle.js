@@ -60,11 +60,50 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1);
+module.exports = __webpack_require__(2);
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+// import './map'
+
+
+var btnAvt = document.getElementsByClassName('btn-avt'),
+    blockAvt = document.getElementsByClassName('welcome__form-wrapper'),
+    btnIndex = document.getElementsByClassName('index');
+
+    btnAvt = btnAvt[0];
+    blockAvt = blockAvt[0];
+    btnIndex = btnIndex[0];
+
+
+btnAvt.onclick = function (e) {
+    e.preventDefault();
+    blockAvt.classList.add('flipped')
+    btnAvt.classList.add('none');
+}
+
+btnIndex.onclick = function (e) {
+    e.preventDefault();
+    blockAvt.classList.remove('flipped')
+    btnAvt.classList.remove('none');
+}
+
+
+
+
+/***/ }),
+/* 2 */
 /***/ (function(module, exports) {
 
 var map;
@@ -101,49 +140,6 @@ function initMap() {
 }
 
 initMap();
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(2);
-module.exports = __webpack_require__(0);
-
-
-/***/ }),
-/* 2 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__map__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__map__);
-
-
-
-var btnAvt = document.getElementsByClassName('btn-avt'),
-    blockAvt = document.getElementsByClassName('welcome__form-wrapper'),
-    btnIndex = document.getElementsByClassName('index');
-
-    btnAvt = btnAvt[0];
-    blockAvt = blockAvt[0];
-    btnIndex = btnIndex[0];
-
-
-btnAvt.onclick = function (e) {
-    e.preventDefault();
-    blockAvt.classList.add('flipped')
-    btnAvt.classList.add('none');
-}
-
-btnIndex.onclick = function (e) {
-    e.preventDefault();
-    blockAvt.classList.remove('flipped')
-    btnAvt.classList.remove('none');
-}
-
-
-
 
 /***/ })
 /******/ ]);

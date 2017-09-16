@@ -43,7 +43,8 @@
               </div>
             </div>
             <div class="header__menu">
-              <div class="hamburger"></div>
+              <div class="hamburger"><a class="hamburger__link" href="">
+                  <div class="hamburger__img"></div></a></div>
             </div>
             <div class="header__user">
               <div class="user">
@@ -75,27 +76,31 @@
               <div class="works-wrapper">
                 <div class="name-content name-content_color">мои работы</div>
               </div>
-              <div class="block">
-                <section class="section__block-left">
-                  <div class="school">
-                    <div class="school__title">
-                      <div class="name-content name-content_color">
-                        Сайт школы онлайн
-                        Образования
+              <div class="wrapper-block">
+                <div class="block">
+                  <section class="section__block-1">
+                    <div class="school">
+                      <div class="school__title">
+                        <div class="name-content name-content_color">
+                          Сайт школы онлайн
+                          Образования
+                        </div>
                       </div>
+                      <div class="school__text">HTML , CSS, JAVASCRIPT</div>
+                      <div class="scholl__link-wrapper"><a class="scholl__link" href="" target="_blanc">Посмотреть сайт
+                          <div class="scholl__link-img">
+                            <svg class="scholl-img">
+                            <use xlink:href="./images/svg/symbols.svg#link"></use>
+                            </svg>
+                          </div></a></div>
                     </div>
-                    <div class="school__text">HTML , CSS, JAVASCRIPT</div>
-                    <div class="scholl__link-wrapper"><a class="scholl__link" href="" target="_blanc">Посмотреть сайт
-                        <div class="scholl__link-img">
-                          <svg class="scholl-img">
-                          <use xlink:href="./images/svg/symbols.svg#link"></use>
-                          </svg>
-                        </div></a></div>
-                  </div>
-                </section>
-                <section class="section__block-right">
-                  <div class="slider-works">
-                    <div class="slider-works__body"><img class="slider-works__img" src="./images/content/bg-1.jpg"></div>
+                  </section>
+                  <section class="section__block-2">
+                    <div class="slider-works">
+                      <div class="slider-works__body"><img class="slider-works__img" src="./images/content/bg-1.jpg"></div>
+                    </div>
+                  </section>
+                  <section class="section__block-3">
                     <div class="slider-works__menu">
                       <div class="slider-works__prev-img"><img class="slider-works__img-pic" src="./images/content/bg-2.jpg">
                         <div class="slider-works__prev">
@@ -112,8 +117,8 @@
                         </div>
                       </div>
                     </div>
-                  </div>
-                </section>
+                  </section>
+                </div>
               </div>
             </div>
           </div>
@@ -235,7 +240,7 @@
         </footer>
       </div>
       <script src="./js/bundle.js"></script>
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdtMMWfIujXIbP3cYnxD07C9Hvj6Dq6o0"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdtMMWfIujXIbP3cYnxD07C9Hvj6Dq6o0&amp;callback=initMap" async defer></script>
     </div>
   </body>
 </html>
