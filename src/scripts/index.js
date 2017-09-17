@@ -1,4 +1,3 @@
-// import './map'
 
 
 var btnAvt = document.getElementsByClassName('btn-avt'),
@@ -15,7 +14,6 @@ var btnAvt = document.getElementsByClassName('btn-avt'),
     menHumb = menHumb[0];
     iconHumb = iconHumb[0];
 
-console.log(btnHumb);
 
 if(btnAvt){
     btnAvt.onclick = function (e) {
