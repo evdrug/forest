@@ -1,0 +1,27 @@
+@function rem($px) {
+  @return $px/16px+0rem;
+}
+
+@mixin media_1200 {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin media_768 {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin media_480 {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin media_320 {
+  @media (max-width: 320px) {
+    @content;
+  }
+}

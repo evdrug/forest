@@ -1,6 +1,10 @@
 .social {
   display: flex;
   justify-content: center;
+
+  @include media_480 {
+    width: 100%;
+  }
 }
 .social__list {
   display: flex;

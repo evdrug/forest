@@ -18,10 +18,20 @@ block content
                 .user
                     .user__img
                         img.user__img-pic(src="./images/user2.jpg")
-                    .name-content
+                    .name-content.name-content_sz-49
                         |#{title}
+                    .name-content__label
+                        | <svg class="name-content__label-pic">
+                        | <use xlink:href="./images/svg/symbols.svg#blog_header"></use>
+                        | </svg>
                     .user__info
                         |Статьи, которые я написал
+            .header__btn
+                a.btn-arrow(href="#")
+                    | <svg class="btn-down">
+                    | <use xlink:href="./images/svg/symbols.svg#portf_arrow_down"></use>
+                    | </svg>
+
     main.content
         .block-triangle
             .block-triangle__left

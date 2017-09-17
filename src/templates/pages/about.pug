@@ -21,9 +21,13 @@ block content
                             img.user__img-pic(src="./images/user2.jpg")
                         .user__info
                             | #{header__info}
+                        .name-content__label.name-content__label_sz
+                            | <svg class="name-content__label-pic">
+                            | <use xlink:href="./images/svg/symbols.svg#portfolio_header"></use>
+                            | </svg>
                 .header__btn
                     a.btn-arrow(href="#")
-                        | <svg class="form__img-login">
+                        | <svg class="btn-down">
                         | <use xlink:href="./images/svg/symbols.svg#portf_arrow_down"></use>
                         | </svg>
 
@@ -43,14 +47,18 @@ block content
                 section.section__block-left.section__block-left_color-poz
                     .logo-page
                         .logo-page__container
-                            .name-content.name-content_color.name-content_sz
+                            .name-content.name-content_color.name-content_sz.name-content_sz35
                                 | #{title}
+                            .name-content__label-t.name-content__label-t_sz
+                                | <svg class="name-content__label-pic">
+                                | <use xlink:href="./images/svg/symbols.svg#about_header"></use>
+                                | </svg>
                     .about
                         .about__img
                             img.about__img-pic(style="background-image: url('./images/user2.jpg')" src="./images/user2.jpg")
                         .about__body
                             .about__title
-                                .name-content.name-content_color.name-content_color-bg
+                                .name-content.name-content_color.name-content_color-bg.nc-s__sz
                                     |Кто я
                             .about__text
                                 p| Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
@@ -61,8 +69,8 @@ block content
                     .can-use-wrapper
                         .can-use
                             .can-use__title
-                                .name-content.name-content_color
-                                    | Чем я могу быть
+                                .name-content.name-content_color.nc-s__sz
+                                    | Чем я могу быть<br>
                                     | вам полезен
                             .can-use__text
                                 |Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.

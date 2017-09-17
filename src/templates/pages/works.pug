@@ -19,11 +19,17 @@ block content
                     .user
                         .user__img
                             img.user__img-pic(src="./images/user2.jpg")
+                        .user__title.user__title_sz
+                            | Друзьякин Евгений
                         .user__info
                             |#{header__info}
+                        .name-content__label.name-content__label_sz
+                            | <svg class="name-content__label-pic">
+                            | <use xlink:href="./images/svg/symbols.svg#portfolio_header"></use>
+                            | </svg>
                 .header__btn
                     a.btn-arrow(href="#")
-                        | <svg class="form__img-login">
+                        | <svg class="btn-down">
                         | <use xlink:href="./images/svg/symbols.svg#portf_arrow_down"></use>
                         | </svg>
 
@@ -40,14 +46,18 @@ block content
             .container
                 .container-page_column
                     .works-wrapper
-                        .name-content.name-content_color
+                        .name-content.name-content_color.name-content_sz-49.nc-s__sz
                             |#{title}
+                        .name-content__label-t
+                            | <svg class="name-content__label-pic">
+                            | <use xlink:href="./images/svg/symbols.svg#works_header"></use>
+                            | </svg>
                     .wrapper-block
                          .block
                             section.section__block-1
                                 .school
                                     .school__title
-                                        .name-content.name-content_color
+                                        .name-content.name-content_color.nc-s__sz
                                             |Сайт школы онлайн
                                             |Образования
                                     .school__text
@@ -108,7 +118,7 @@ block content
                 .reviews__contact
                     .reviews__contact-wrapper
                         form.contact-form
-                            .contact-form__title.name-content.name-content_color
+                            .contact-form__title.name-content.name-content_color.nc-s__sz
                                 |Связаться со мной
                             .form__row
                                 input.contact-form__input(type="text" placeholder="Имя")
@@ -121,7 +131,7 @@ block content
                                 button.contact-form__btn(type="reset")|Очистить
 
                     .reviews__btn-up
-                        .arrow-up__wrapper
+                        a.arrow-up__wrapper(href="")
                             | <svg class="arrow_up">
                             | <use xlink:href="./images/svg/symbols.svg#portf_arrow_up"></use>
                             | </svg>

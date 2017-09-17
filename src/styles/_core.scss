@@ -6,6 +6,10 @@
   font-family: Roboto;
   font-weight: 500;
   color: $colorText;
+
+  @include media_768 {
+    font-size: 14px;
+  }
 }
 html,body{
   height: 100%;
