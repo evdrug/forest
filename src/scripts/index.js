@@ -1,4 +1,4 @@
-import './map'
+// import './map'
 
 
 var btnAvt = document.getElementsByClassName('btn-avt'),

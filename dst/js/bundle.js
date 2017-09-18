@@ -60,65 +60,22 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-var map;
+__webpack_require__(1);
+module.exports = __webpack_require__(2);
 
-
-
-
-
-
-function initMap() {
-
-    var pos = {lat: 59.937763, lng: 30.218649};
-    var pos1 = {lat: 59.937220, lng: 30.224896};
-    var marker_url = "/images/map-marker.png";
-    var popupContent = '<p class="content">Что угодно</p>';
-
-    var styles = [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#87a87b"},{"visibility":"on"}]}]
-
-
-    map = new google.maps.Map(document.getElementById('map'), {
-        center: pos,
-        zoom: 16,
-        disableDefaultUI: true,
-        scrollwheel: false
-    });
-    var marker = new google.maps.Marker({
-        position: pos1,
-        map: map,
-        icon: marker_url,
-        animation: google.maps.Animation.BOUNCE
-    });
-
-    map.setOptions({styles: styles});
-}
-
-initMap();
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-__webpack_require__(2);
-module.exports = __webpack_require__(0);
-
-
-/***/ }),
-/* 2 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__map__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__map__);
-
+// import './map'
 
 
 var btnAvt = document.getElementsByClassName('btn-avt'),
@@ -144,6 +101,45 @@ btnIndex.onclick = function (e) {
 
 
 
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+// var map;
+//
+//
+//
+//
+//
+//
+// function initMap() {
+//
+//     var pos = {lat: 59.937763, lng: 30.218649};
+//     var pos1 = {lat: 59.937220, lng: 30.224896};
+//     var marker_url = "/images/map-marker.png";
+//     var popupContent = '<p class="content">Что угодно</p>';
+//
+//     var styles = [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#87a87b"},{"visibility":"on"}]}]
+//
+//
+//     map = new google.maps.Map(document.getElementById('map'), {
+//         center: pos,
+//         zoom: 16,
+//         disableDefaultUI: true,
+//         scrollwheel: false
+//     });
+//     var marker = new google.maps.Marker({
+//         position: pos1,
+//         map: map,
+//         icon: marker_url,
+//         animation: google.maps.Animation.BOUNCE
+//     });
+//
+//     map.setOptions({styles: styles});
+// }
+//
+// initMap();
 
 /***/ })
 /******/ ]);
