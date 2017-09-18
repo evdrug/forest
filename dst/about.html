@@ -12,27 +12,35 @@
   </head>
   <body>
     <div class="wrapper-page">
+      <div class="meniHamb">
+        <ul class="meniHamb__list">
+          <li class="menuHamb__item"><a class="menuHamb__link" href="works.html">Мои работы</a></li>
+          <li class="menuHamb__item"><a class="menuHamb__link" href="blog.html">Блог</a></li>
+          <li class="menuHamb__item"><a class="menuHamb__link" href="about.html">Обо мне</a></li>
+          <li class="menuHamb__item"><a class="menuHamb__link" href="index.html">Авторизация</a></li>
+        </ul>
+      </div>
       <div class="reviews-page">
         <section class="header">
           <div class="container">
             <div class="header__social">
               <div class="social">
                 <ul class="social__list">
-                  <li class="social__items"><a class="social__link" href="#" target="_blanc">
+                  <li class="social__items"><a class="social__link" href="https://vk.com/e.druzyakin" target="_blanc">
                       <div class="social__link-pic">
                         <svg class="vk">
                         <use xlink:href="./images/svg/symbols.svg#vk"></use>
                         </svg>
                       </div>
                       <div class="social__link-text">vk</div></a></li>
-                  <li class="social__items"><a class="social__link" href="#" target="_blanc">
+                  <li class="social__items"><a class="social__link" href="https://github.com/evdrug" target="_blanc">
                       <div class="social__link-pic">
                         <svg class="git">
                         <use xlink:href="./images/svg/symbols.svg#github"></use>
                         </svg>
                       </div>
                       <div class="social__link-text">git</div></a></li>
-                  <li class="social__items"><a class="social__link" href="#" target="_blanc">
+                  <li class="social__items"><a class="social__link" href="https://ru.linkedin.com/" target="_blanc">
                       <div class="social__link-pic">
                         <svg class="in">
                         <use xlink:href="./images/svg/symbols.svg#in"></use>
@@ -43,16 +51,22 @@
               </div>
             </div>
             <div class="header__menu">
-              <div class="hamburger"></div>
+              <div class="hamburger"><a class="hamburger__link" href="">
+                  <div class="hamburger__img"></div></a></div>
             </div>
             <div class="header__user">
               <div class="user">
                 <div class="user__img"><img class="user__img-pic" src="./images/user2.jpg"></div>
                 <div class="user__info">Личный сайт веб разработчика</div>
+                <div class="name-content__label name-content__label_sz">
+                  <svg class="name-content__label-pic">
+                  <use xlink:href="./images/svg/symbols.svg#portfolio_header"></use>
+                  </svg>
+                </div>
               </div>
             </div>
             <div class="header__btn"><a class="btn-arrow" href="#">
-                <svg class="form__img-login">
+                <svg class="btn-down">
                 <use xlink:href="./images/svg/symbols.svg#portf_arrow_down"></use>
                 </svg></a></div>
           </div>
@@ -64,22 +78,29 @@
               <polygon points="0,0 0,225 1000,225 1000,155"></polygon>
               </svg>
             </div>
-            <div class="block-triangle__right">
+            <div class="block-triangle__right block-triangle__right_color">
               <svg class="triangle-right" viewBox="0 0 1000 225" preserveAspectRatio="none">
               <polygon points="0,225 1000,225 1000,0 0,155"></polygon>
               </svg>
             </div>
           </div>
-          <div class="block">
+          <div class="block-about">
             <section class="section__block-left section__block-left_color-poz">
               <div class="logo-page">
-                <div class="name-content name-content_color name-content_sz">обо мне</div>
+                <div class="logo-page__container">
+                  <h1 class="name-content name-content_color name-content_sz name-content_sz35">обо мне</h1>
+                  <div class="name-content__label-t name-content__label-t_sz">
+                    <svg class="name-content__label-pic">
+                    <use xlink:href="./images/svg/symbols.svg#about_header"></use>
+                    </svg>
+                  </div>
+                </div>
               </div>
               <div class="about">
                 <div class="about__img"><img class="about__img-pic" style="background-image: url('./images/user2.jpg');" src="./images/user2.jpg"></div>
                 <div class="about__body">
                   <div class="about__title">
-                    <div class="name-content name-content_color name-content_color-bg">Кто я</div>
+                    <div class="name-content name-content_color name-content_color-bg nc-s__sz">Кто я</div>
                   </div>
                   <div class="about__text">
                     <p>Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.</p>
@@ -88,26 +109,169 @@
                 </div>
               </div>
             </section>
-            <section class="section__block-right">
-              <div class="slider-works">
-                <div class="slider-works__body"><img class="slider-works__img" src="./images/content/bg-1.jpg"></div>
-                <div class="slider-works__menu">
-                  <div class="slider-works__prev-img"><img class="slider-works__img-pic" src="./images/content/bg-2.jpg"></div>
-                  <div class="slider-works__next-img"><img class="slider-works__img-pic" src="./images/content/bg-3.jpg"></div>
+            <section class="section__block-right section__block-right_color">
+              <div class="can-use-wrapper">
+                <div class="can-use">
+                  <div class="can-use__title">
+                    <div class="name-content name-content_color nc-s__sz">
+                      Чем я могу быть<br>
+                      вам полезен
+                    </div>
+                  </div>
+                  <div class="can-use__text">Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.</div>
+                </div>
+                <div class="skill">
+                  <div class="skill__row">
+                    <div class="skill-cont">
+                      <div class="skill-cont___title">Frontend</div>
+                      <div class="skill-cont___data">
+                        <ul class="skill__list">
+                          <li class="skill__items">
+                            <svg class="circles" viewBox="0 0 110 110">
+                                    <circle r="45" cx="50%" cy="50%" fill="none" class="circle__bg" />
+                                    <circle r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class="circle__layer circle-75" />
+                            </svg>
+                            <div class="skill__desc">HTML</div>
+                          </li>
+                          <li class="skill__items">
+                            <svg class="circles" viewBox="0 0 110 110">
+                                    <circle r="45" cx="50%" cy="50%" fill="none" class="circle__bg" />
+                                    <circle r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class="circle__layer circle-55" />
+                            </svg>
+                            <div class="skill__desc">CSS3</div>
+                          </li>
+                          <li class="skill__items">
+                            <svg class="circles" viewBox="0 0 110 110">
+                                    <circle r="45" cx="50%" cy="50%" fill="none" class="circle__bg" />
+                                    <circle r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class="circle__layer circle-45" />
+                            </svg>
+                            <div class="skill__desc">JavaScript<br>& jQuery</div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="skill__row">
+                    <div class="skill-cont">
+                      <div class="skill-cont___title">Backend</div>
+                      <div class="skill-cont___data">
+                        <ul class="skill__list">
+                          <li class="skill__items">
+                            <svg class="circles" viewBox="0 0 110 110">
+                                    <circle r="45" cx="50%" cy="50%" fill="none" class="circle__bg" />
+                                    <circle r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class="circle__layer circle-40" />
+                            </svg>
+                            <div class="skill__desc">PHP</div>
+                          </li>
+                          <li class="skill__items">
+                            <svg class="circles" viewBox="0 0 110 110">
+                                    <circle r="45" cx="50%" cy="50%" fill="none" class="circle__bg" />
+                                    <circle r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class="circle__layer circle-30" />
+                            </svg>
+                            <div class="skill__desc">mySQL</div>
+                          </li>
+                          <li class="skill__items">
+                            <svg class="circles" viewBox="0 0 110 110">
+                                    <circle r="45" cx="50%" cy="50%" fill="none" class="circle__bg" />
+                                    <circle r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class="circle__layer circle-10" />
+                            </svg>
+                            <div class="skill__desc">Node.js<br>& npm</div>
+                          </li>
+                          <li class="skill__items">
+                            <svg class="circles" viewBox="0 0 110 110">
+                                    <circle r="45" cx="50%" cy="50%" fill="none" class="circle__bg" />
+                                    <circle r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class="circle__layer circle-5" />
+                            </svg>
+                            <div class="skill__desc">Mongo.db</div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="skill__row">
+                    <div class="skill-cont">
+                      <div class="skill-cont___title">WorkFlow</div>
+                      <div class="skill-cont___data">
+                        <ul class="skill__list">
+                          <li class="skill__items">
+                            <svg class="circles" viewBox="0 0 110 110">
+                                    <circle r="45" cx="50%" cy="50%" fill="none" class="circle__bg" />
+                                    <circle r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class="circle__layer circle-75" />
+                            </svg>
+                            <div class="skill__desc">Git</div>
+                          </li>
+                          <li class="skill__items">
+                            <svg class="circles" viewBox="0 0 110 110">
+                                    <circle r="45" cx="50%" cy="50%" fill="none" class="circle__bg" />
+                                    <circle r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class="circle__layer circle-55" />
+                            </svg>
+                            <div class="skill__desc">Gulp</div>
+                          </li>
+                          <li class="skill__items">
+                            <svg class="circles" viewBox="0 0 110 110">
+                                    <circle r="45" cx="50%" cy="50%" fill="none" class="circle__bg" />
+                                    <circle r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class="circle__layer circle-45" />
+                            </svg>
+                            <div class="skill__desc">Bower</div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </section>
           </div>
         </main>
         <section class="section__maps">
+          <div class="contact-info">
+            <div class="contact-info__title name-content name-content_color">Контакты</div>
+            <ul class="contact-info__list">
+              <li class="contact-info__item">
+                <div class="contact-info__img">
+                  <svg class="contact-info__pic skype">
+                  <use xlink:href="./images/svg/symbols.svg#skype"></use>
+                  </svg>
+                </div><a class="contact-info__text" href="skype:evdrug">evdrug</a>
+              </li>
+              <li class="contact-info__item">
+                <div class="contact-info__img">
+                  <svg class="contact-info__pic envelope2">
+                  <use xlink:href="./images/svg/symbols.svg#envelope2"></use>
+                  </svg>
+                </div><a class="contact-info__text" href="mailto:druzyakin.e@gmail.com">druzyakin.e@gmail.com</a>
+              </li>
+              <li class="contact-info__item">
+                <div class="contact-info__img">
+                  <svg class="contact-info__pic phone2">
+                  <use xlink:href="./images/svg/symbols.svg#phone2"></use>
+                  </svg>
+                </div><a class="contact-info__text" href="tel:+79818467713">+79818467713</a>
+              </li>
+              <li class="contact-info__item">
+                <div class="contact-info__img">
+                  <svg class="contact-info__pic map_marker">
+                  <use xlink:href="./images/svg/symbols.svg#map_marker"></use>
+                  </svg>
+                </div>
+                <div class="contact-info__text">г.Санкт-Петербург</div>
+              </li>
+            </ul>
+          </div>
           <div class="map" id="map">
-            <script> var map;
+            <script>
+            var map;
+            
+            
+            
+            
+            
             
             function initMap() {
             
                 var pos = {lat: 59.937763, lng: 30.218649};
                 var pos1 = {lat: 59.937220, lng: 30.224896};
-                var marker_url = "/images/map-marker.png";
+                var marker_url = "images/map-marker.png";
                 var popupContent = '<p class="content">Что угодно</p>';
             
                 var styles = [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#87a87b"},{"visibility":"on"}]}]
@@ -128,8 +292,6 @@
             
                 map.setOptions({styles: styles});
             }
-            
-            
             </script>
           </div>
         </section>
@@ -138,7 +300,7 @@
             <div class="container">
               <div class="container-footer">
                 <div class="footer__block">
-                  <div class="info">Этот сайт я сделал в рамках обучения в Школе онлайн образования &nbsp;<a class="info__link" href="">LoftSchool</a>&nbsp;.</div>
+                  <div class="info">Этот сайт я сделал в рамках обучения в Школе онлайн образования &nbsp;<a class="info__link" href="https://loftschool.com">LoftSchool</a>&nbsp;.</div>
                 </div>
                 <div class="footer__block">
                   <div class="footer__menu">
@@ -152,21 +314,21 @@
                   <div class="footer__social">
                     <div class="social">
                       <ul class="social__list">
-                        <li class="social__items"><a class="social__link" href="#" target="_blanc">
+                        <li class="social__items"><a class="social__link" href="https://vk.com/e.druzyakin" target="_blanc">
                             <div class="social__link-pic">
                               <svg class="vk">
                               <use xlink:href="./images/svg/symbols.svg#vk"></use>
                               </svg>
                             </div>
                             <div class="social__link-text">vk</div></a></li>
-                        <li class="social__items"><a class="social__link" href="#" target="_blanc">
+                        <li class="social__items"><a class="social__link" href="https://github.com/evdrug" target="_blanc">
                             <div class="social__link-pic">
                               <svg class="git">
                               <use xlink:href="./images/svg/symbols.svg#github"></use>
                               </svg>
                             </div>
                             <div class="social__link-text">git</div></a></li>
-                        <li class="social__items"><a class="social__link" href="#" target="_blanc">
+                        <li class="social__items"><a class="social__link" href="https://ru.linkedin.com/" target="_blanc">
                             <div class="social__link-pic">
                               <svg class="in">
                               <use xlink:href="./images/svg/symbols.svg#in"></use>

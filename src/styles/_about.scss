@@ -1,24 +1,93 @@
 .section__maps {
-  width: 100%;
-  height: 1114px;
+  position: relative;
 }
 .map {
-  height: 100%;
   width: 100%;
+  height: 1114px;
+
+  @include media_1200 {
+    height: 977px;
+  }
+
+  @include media_768 {
+    height: 903px;
+  }
 }
 
-.block-triangle__left_color .triangle-left {
-  fill:#ecf0e3;
+.contact-info {
+  position: absolute;
+  z-index: 10;
+  width: 380px;
+  top: 40%;
+  left: 50%;
+  transform:  translate(-50%,-50%);
+  height: auto;
+  background-color: #f4f5f0;
+  border-radius: 5px;
+  padding: 36px 45px;
+  box-shadow:  0 0 10px #5d5a55;
+
+  @include media_480 {
+    position: inherit;
+    box-shadow: none;
+    transform:translate(0,0);
+    left: 0;
+    width: 100%;
+    background-color: #fcfcfc;
+    padding: 36px 20px;
+  }
 }
 
-.section__block-left_color-poz {
-  background-color: #ecf0e3;
+.contact-info__list {
+  list-style:none;
 }
 
-.name-content_sz{
-  font-size: 63px;
-  font-weight: 400;
-  white-space: nowrap;
+.contact-info__item {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.contact-info__text {
+  width: 80%;
+  overflow: hidden;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.contact-info__img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.contact-info__pic {
+  width: 100%;
+  height: 100%;
+  fill: $colorBtn;
+}
+
+.section__block-left, .section__block-right {
+  width: 50%;
+
+  @include media_768 {
+    width: 100%;
+  }
+}
+
+
+
+.section__block-left {
+  background-color: #ebefe2;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+
+
 }
 
 
@@ -26,11 +95,44 @@
   justify-content: flex-end;
   align-items:flex-start;
   position: relative;
+  background-color: #ecf0e3;
+
+  @include media_1200 {
+    flex-direction: column;
+    align-items:center;
+    justify-content: flex-start;
+  }
+
+  @include media_768 {
+    background-color:#f4f6f0;
+  }
+
 }
-.logo-page{
+.logo-page {
+  flex:1;
+  height: 100%;
+  position: relative;
+
+  @include media_1200 {
+    width: 100%;
+    flex: inherit;
+    height: auto;
+  }
+
+  @include media_480 {
+    padding-top: 20px;
+  }
+}
+
+.logo-page__container{
   position: absolute;
-  top: -30px;
-  left: 140px;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include media_1200 {
+    position: inherit;
+  }
 
 }
 .about {
@@ -38,8 +140,23 @@
   margin-bottom: 45px;
   padding-right: 20px;
 
+  @include media_768 {
+    max-width: 473px;
+    padding-right: 0;
+  }
+
 }
 
+.about__body {
+  @include media_480 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.about__text {
+  line-height: 24px;
+}
 .about__img {
   margin-bottom: 41px;
 }
@@ -51,8 +168,246 @@
   background-size: cover;
 }
 
-.name-content_sz{
-  font-size: 63px;
-  font-weight: 400;
-  white-space: nowrap;
+
+
+
+.block-about {
+  display: flex;
+  @include media_768 {
+    flex-direction: column;
+
+  }
+
+
+}
+
+.section__block-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  @include media_768 {
+    align-items: center;
+
+  }
+
+}
+
+.block-triangle__right_color .triangle-right {
+  fill: #f4f6f0;
+}
+.section__block-right_color {
+  background-color: #f4f6f0;
+}
+
+.can-use-wrapper {
+  padding-left: 40px;
+  padding-bottom: 40px;
+
+  @include media_768 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+}
+
+.can-use {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+
+  @include media_768 {
+    justify-content: center;
+
+  }
+
+  @include media_480 {
+    margin-bottom: 30px;
+
+  }
+
+}
+
+.can-use__title {
+  max-width: 310px;
+}
+
+.can-use__text {
+
+  @include media_768 {
+    width: 473px;
+
+  }
+
+  @include media_480 {
+    width: 100%;
+
+  }
+}
+
+.skill {
+}
+.skill__list{
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  @include media_768 {
+    justify-content: center;
+  }
+
+  @include media_480 {
+    justify-content: space-around;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+.skill__items {
+  width: 120px;
+  height: 120px;
+  margin-right: 40px;
+  position: relative;
+
+  &:last-child {
+    margin-right: 0;
+
+  }
+
+  @include media_1200 {
+    width: 110px;
+    height: 110px;
+    margin-right: 35px;
+  }
+
+  @include media_768{
+    margin-right: 30px;
+  }
+
+  @include media_480 {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+}
+.skill__desc {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: $colorBtn;
+  text-align: center;
+
+  @include media_1200 {
+    font-size: 13px;
+  }
+}
+
+.test {
+  transform: translate(-100)
+}
+.skill__row {
+  margin-bottom: 30px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include media_480 {
+    margin-bottom: 0;
+  }
+}
+
+.skill-cont___title{
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 10px;
+
+  @include media_768 {
+    text-align: center;
+  }
+
+  @include media_480 {
+    font-size: 21px;
+  }
+}
+.circles {
+  fill: none;
+  stroke-width: 15;
+}
+
+.circle__bg {
+  stroke: #dfddd6;
+}
+
+.circle__layer{
+  stroke: #6da968;
+  stroke-dasharray: .0010 282.6;
+  transition: all 1s;
+}
+
+.circle-0 {
+  stroke-dasharray: .001 282.6;
+}
+.circle-5 {
+  stroke-dasharray: 14.13 282.6;
+}
+.circle-10 {
+  stroke-dasharray: 28.26 282.6;
+}
+.circle-15 {
+  stroke-dasharray: 42.39 282.6;
+}
+.circle-20 {
+  stroke-dasharray: 56.52 282.6;
+}
+.circle-25 {
+  stroke-dasharray: 70.65 282.6;
+}
+.circle-30 {
+  stroke-dasharray: 84.78 282.6;
+}
+.circle-35 {
+  stroke-dasharray: 98.91 282.6;
+}
+.circle-40 {
+  stroke-dasharray: 113.04 282.6;
+}
+.circle-45 {
+  stroke-dasharray: 127.17 282.6;
+}
+.circle-50 {
+  stroke-dasharray: 141.3 282.6;
+}
+.circle-55 {
+  stroke-dasharray: 155.43 282.6;
+}
+.circle-60 {
+  stroke-dasharray: 169.56 282.6;
+}
+.circle-65 {
+  stroke-dasharray: 183.69 282.6;
+}
+.circle-70 {
+  stroke-dasharray: 197.82 282.6;
+}
+.circle-75 {
+  stroke-dasharray: 211.95 282.6;
+}
+.circle-80 {
+  stroke-dasharray: 226.08 282.6;
+}
+.circle-85 {
+  stroke-dasharray: 240.21 282.6;
+}
+.circle-90 {
+  stroke-dasharray: 254.34 282.6;
+}
+.circle-95 {
+  stroke-dasharray: 268.47 282.6;
+}
+.circle-100 {
+  stroke-dasharray: 282.6 282.6;
 }
