@@ -81,7 +81,7 @@ var btnAvt = document.getElementsByClassName('btn-avt'),
     blockAvt = document.getElementsByClassName('welcome__form-wrapper'),
     btnIndex = document.getElementsByClassName('index'),
     btnHumb = document.getElementsByClassName('hamburger__link'),
-    menHumb = document.getElementsByClassName('meniHamb'),
+    menHumb = document.getElementsByClassName('menu-hamb'),
     iconHumb = document.getElementsByClassName('hamburger');
 
     btnAvt = btnAvt[0];
@@ -112,15 +112,14 @@ if(btnIndex){
 btnHumb.onclick = function (e) {
     e.preventDefault();
 
-    menuHambItems = document.getElementsByClassName('menuHamb__item');
-    console.log(menuHambItems);
+    menuHambItems = document.getElementsByClassName('menu-hamb__item');
     iconHumbAct = document.getElementsByClassName('hamburger_active');
     if(iconHumbAct[0]) {
-        menHumb.classList.remove('meniHamb_active')
+        menHumb.classList.remove('menu-hamb_active')
         iconHumb.classList.remove('hamburger_active');
         document.body.style.overflow = 'auto';
     }else{
-        menHumb.classList.add('meniHamb_active')
+        menHumb.classList.add('menu-hamb_active')
         iconHumb.classList.add('hamburger_active');
         document.body.style.overflow = 'hidden';
         if(menuHambItems){

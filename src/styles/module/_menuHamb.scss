@@ -9,11 +9,11 @@
 }
 
 
-.menuHamb__item_active .menuHamb__link:after {
+.menu-hamb__item_active .menu-hamb__link:after {
   width: 89px;
 }
 
-.menuHamb__link {
+.menu-hamb__link {
   text-align: center;
   text-decoration: none;
   color: #ffffff;
@@ -37,7 +37,7 @@
   }
 }
 
-.menuHamb__link:hover {
+.menu-hamb__link:hover {
   &:after {
     width: 89px;
   }
@@ -66,7 +66,7 @@
 }
 
 
-.meniHamb__list {
+.menu-hamb__list {
   position: absolute;
   list-style:none;
   top: 50%;
@@ -82,7 +82,7 @@
 
 }
 
-.menuHamb__item {
+.menu-hamb__item {
   position: relative;
   left: 99999px;
   padding-bottom: 30px;
@@ -92,7 +92,7 @@
   }
 }
 
-.meniHamb__left {
+.menu-hamb__left {
   position: absolute;
   left: 0;
   top: 0;
@@ -102,7 +102,7 @@
   z-index:11;
   transition: .7s;
 }
-.meniHamb__right {
+.menu-hamb__right {
   position: absolute;
   right: 0;
   top: 0;
@@ -114,28 +114,28 @@
 }
 
 
-.meniHamb_active {
+.menu-hamb_active {
 
-  .meniHamb__right, .meniHamb__left {
+  .menu-hamb__right, .menu-hamb__left {
     top: 0;
     width: 50%;
     transition: .7s;
     z-index:11;
   }
 
-  .meniHamb__list{
+  .menu-hamb__list{
     width: 100%;
     left: 0;
   }
 
-  .menuHamb__item{
+  .menu-hamb__item{
     animation: list-menu 1s forwards;
     animation-timing-function: ease;
   }
 
 }
 
-.menuHamb__link {
+.menu-hamb__link {
   z-index: 13;
 }
 
