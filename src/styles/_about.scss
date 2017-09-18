@@ -86,6 +86,11 @@
   display: flex;
   align-items:center;
   justify-content: center;
+  padding-left: 10px;
+
+  @include media_768 {
+    padding-left: 0;
+  }
 
 
 }
@@ -125,15 +130,7 @@
 }
 
 .logo-page__container{
-  position: absolute;
-  top: -6px;
-  left: 50%;
-  transform: translateX(-50%);
-
-  @include media_1200 {
-    position: inherit;
-  }
-
+  padding-right: 10px;
 }
 .about {
   max-width: 437px;
@@ -203,11 +200,11 @@
 
 .can-use-wrapper {
   padding-left: 40px;
+  padding-right: 10px;
   padding-bottom: 40px;
 
   @include media_768 {
     padding-left: 10px;
-    padding-right: 10px;
   }
 
 }
