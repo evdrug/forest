@@ -111,6 +111,9 @@ if(btnIndex){
 
 btnHumb.onclick = function (e) {
     e.preventDefault();
+
+    menuHambItems = document.getElementsByClassName('menuHamb__item');
+    console.log(menuHambItems);
     iconHumbAct = document.getElementsByClassName('hamburger_active');
     if(iconHumbAct[0]) {
         menHumb.classList.remove('meniHamb_active')
@@ -120,6 +123,11 @@ btnHumb.onclick = function (e) {
         menHumb.classList.add('meniHamb_active')
         iconHumb.classList.add('hamburger_active');
         document.body.style.overflow = 'hidden';
+        if(menuHambItems){
+            for (var i = 0; i < menuHambItems.length; ++i) {
+                menuHambItems[i].setAttribute('style', `animation-delay: 0.${5+i}s;`);
+            }
+        }
     }
 
 }
