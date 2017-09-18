@@ -8,13 +8,6 @@
   }
 }
 
-.meniHamb__list {
-  list-style:none;
-}
-
-.menuHamb__item {
-  padding-bottom: 30px;
-}
 
 .menuHamb__item_active .menuHamb__link:after {
   width: 89px;
@@ -75,6 +68,7 @@
 
 .meniHamb__list {
   position: absolute;
+  list-style:none;
   top: 50%;
   left: 99999px;
   z-index: 11;
@@ -91,7 +85,11 @@
 .menuHamb__item {
   position: relative;
   left: 99999px;
+  padding-bottom: 30px;
 
+  &:last-child {
+    padding-bottom: 0;
+  }
 }
 
 .meniHamb__left {
