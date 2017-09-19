@@ -69,8 +69,8 @@
 .menu-hamb__list {
   position: absolute;
   list-style:none;
-  top: 50%;
-  left: 99999px;
+  top: -50%;
+  //left: 99999px;
   z-index: 11;
   overflow: hidden;
   display: flex;
@@ -126,6 +126,8 @@
   .menu-hamb__list{
     width: 100%;
     left: 0;
+    top: -50%;
+
   }
 
   .menu-hamb__item{
