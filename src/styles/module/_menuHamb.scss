@@ -113,8 +113,17 @@
   transition: .7s;
 }
 
+.menu-hamb__link {
+  z-index: 13;
+  font-size: 0px;
+}
+
 
 .menu-hamb_active {
+
+  .menu-hamb__link {
+    font-size: 35px;
+  }
 
   .menu-hamb__right, .menu-hamb__left {
     top: 0;
@@ -126,7 +135,7 @@
   .menu-hamb__list{
     width: 100%;
     left: 0;
-    top: -50%;
+    top: 50%;
 
   }
 
@@ -137,7 +146,5 @@
 
 }
 
-.menu-hamb__link {
-  z-index: 13;
-}
+
 
