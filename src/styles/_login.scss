@@ -1,13 +1,23 @@
 .wrapper-img {
   width: 100%;
   height: 100%;
-  background-image: url(../images/bg/bg-water.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  //background-image: url(../images/bg/bg-water.jpg);
+  //background-repeat: no-repeat;
+  //background-size: cover;
+  position: relative;
+
 
   @include media_480-h {
     min-height: 568px;
   }
+}
+
+.Background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .welcome {
