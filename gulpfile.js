@@ -56,6 +56,26 @@ function favicon() {
         .pipe(gulp.dest(paths.root));
 }
 
+
+function responsive1() {
+    return gulp.src('./src/images/**/*.{png,jpg}')
+
+        .pipe(responsive({
+            '*.{png,jpg}': [{
+                width: 600
+            },{
+                // iPhone 4s, 5, 5s
+                width: 600 * 2,
+                rename: {suffix: '@2x'}
+            },{
+                // iPhone 6, 6+
+                width: 600 * 3,
+                rename: {suffix: '@3x'}
+            }]
+        }))
+                .pipe(gulp.dest('./dst/images/t/'));
+}
+
 function images() {
     return gulp.src('./src/images/**/*.{jpg,png}')
         // .pipe(responsive({
@@ -183,6 +203,7 @@ function watch() {
 
 exports.templates = templates;
 exports.images = images;
+exports.responsive1 = responsive1;
 exports.favicon = favicon;
 exports.styles = styles;
 exports.styles2 = styles2;
