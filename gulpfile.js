@@ -57,15 +57,28 @@ function favicon() {
 }
 
 function images() {
-    return gulp.src('./src/images/**/*.{jpg,png}')
+    return gulp.src('./src/images/{content,bg}/**/*.{jpg,png}')
         // .pipe(responsive({
         //     '*.{jpg,png}': [{
-        //         width: 400
-        //     },{
+        //         width: 400,
+        //         rename: {suffix: '@1x'}
+        //     }, {
         //         width: 800,
         //         rename: {suffix: '@2x'}
+        //     }, {
+        //         width: 1600,
+        //         rename: {suffix: '@3x'}
         //     }],
-        // }))
+        // },
+        //     {
+        //     // Global configuration for all images
+        //     // The output quality for JPEG, WebP and TIFF output formats
+        //     quality: 70,
+        //         // Use progressive (interlace) scan for JPEG and PNG output
+        //         progressive: true,
+        //     // Strip all metadata
+        //     withMetadata: false,
+        //      }))
 
         .pipe(imagemin({
             progressive: true,
