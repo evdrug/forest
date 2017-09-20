@@ -57,7 +57,7 @@ function favicon() {
 }
 
 function images() {
-    return gulp.src('./src/images/{content,bg}/**/*.{jpg,png}')
+    return gulp.src('./src/images/**/*.{jpg,png}')
         // .pipe(responsive({
         //     '*.{jpg,png}': [{
         //         width: 400,

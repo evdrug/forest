@@ -352,14 +352,14 @@
 .reviews__contact {
 }
 
-.reviews__contact-wrapper {
+
+.reviews__container-form {
   width: 380px;
   height: 461px;
-  background-color: rgba(218,219,214, .8);
   border-radius: 5px;
-  padding-top: 32px;
   position: relative;
   overflow: hidden;
+  background-color: rgba(218,219,214,0.5);
 
   @include media_768 {
     width: 349px;
@@ -369,6 +369,29 @@
     width: 299px;
     height: 423px;
   }
+}
+.reviews__contact-wrapper-blur {
+  //background-color: rgba(218,219,214,0.5);
+
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/bg/bg-1.png");
+  background-position: center;
+  background-size: cover;
+
+
+  filter: blur(5px);
+
+
+}
+
+.contact-form {
+  padding-top: 32px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
 }
 
 .contact-form__input {

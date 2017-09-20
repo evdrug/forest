@@ -4,6 +4,10 @@
   background-image: url(../images/bg/bg-water.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+
+  @include media_480-h {
+    min-height: 568px;
+  }
 }
 
 .welcome {
