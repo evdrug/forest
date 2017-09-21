@@ -68,14 +68,12 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(1);
-__webpack_require__(2);
-module.exports = __webpack_require__(3);
+module.exports = __webpack_require__(2);
 
 
 /***/ }),
 /* 1 */
 /***/ (function(module, exports) {
-
 
 
 var btnAvt = document.getElementsByClassName('btn-avt'),
@@ -137,45 +135,6 @@ btnHumb.onclick = function (e) {
 
 /***/ }),
 /* 2 */
-/***/ (function(module, exports) {
-
-// var map;
-//
-//
-//
-//
-//
-//
-// function initMap() {
-//
-//     var pos = {lat: 59.937763, lng: 30.218649};
-//     var pos1 = {lat: 59.937220, lng: 30.224896};
-//     var marker_url = "/images/map-marker.png";
-//     var popupContent = '<p class="content">Что угодно</p>';
-//
-//     var styles = [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#87a87b"},{"visibility":"on"}]}]
-//
-//
-//     map = new google.maps.Map(document.getElementById('map'), {
-//         center: pos,
-//         zoom: 16,
-//         disableDefaultUI: true,
-//         scrollwheel: false
-//     });
-//     var marker = new google.maps.Marker({
-//         position: pos1,
-//         map: map,
-//         icon: marker_url,
-//         animation: google.maps.Animation.BOUNCE
-//     });
-//
-//     map.setOptions({styles: styles});
-// }
-//
-// initMap();
-
-/***/ }),
-/* 3 */
 /***/ (function(module, exports) {
 
 /******/ (function(modules) { // webpackBootstrap
@@ -244,8 +203,8 @@ btnHumb.onclick = function (e) {
 	
 	var divSelector = '.Background';
 	var canvasSelector = '.Background-canvas';
-	var filePath = 'images/bg/bg-water.jpg';
-	var fileMapsPath = 'images/bg/water-maps.jpg';
+	var filePath = 'images/water/water.jpg';
+	var fileMapsPath = 'images/water/water-maps.jpg';
 	
 	var canvas = document.querySelector(canvasSelector);
 	

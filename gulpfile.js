@@ -28,7 +28,7 @@ const paths = {
         dest: 'dst/css/'
     },
     scripts: {
-        src: 'src/scripts/**/*.js',
+        src: 'src/scripts/**/index.js',
         dest: 'dst/js/'
     },
     templates: {
@@ -57,48 +57,46 @@ function favicon() {
 }
 
 
-function responsive1() {
+function respons() {
     return gulp.src('./src/images/**/*.{png,jpg}')
 
         .pipe(responsive({
-            '*.{png,jpg}': [{
+
+            '*':{},
+            'water/*':{},
+            'preloader/*':{},
+
+            'bg/*.{png,jpg}': [{
                 width: 600
             },{
-                // iPhone 4s, 5, 5s
                 width: 600 * 2,
                 rename: {suffix: '@2x'}
             },{
-                // iPhone 6, 6+
+                width: 600 * 3,
+                rename: {suffix: '@3x'}
+            }],
+            'content/*.{png,jpg}': [{
+                width: 600
+            },{
+                width: 600 * 2,
+                rename: {suffix: '@2x'}
+            },{
                 width: 600 * 3,
                 rename: {suffix: '@3x'}
             }]
-        }))
-                .pipe(gulp.dest('./dst/images/t/'));
+        },{
+            quality: 50,
+            compressionLevel: 6,
+            progressive: true,
+            withMetadata: false,
+            errorOnEnlargement: false
+            }
+            ))
+                .pipe(gulp.dest('./dst/images/'));
 }
 
 function images() {
     return gulp.src('./src/images/**/*.{jpg,png}')
-        // .pipe(responsive({
-        //     '*.{jpg,png}': [{
-        //         width: 400,
-        //         rename: {suffix: '@1x'}
-        //     }, {
-        //         width: 800,
-        //         rename: {suffix: '@2x'}
-        //     }, {
-        //         width: 1600,
-        //         rename: {suffix: '@3x'}
-        //     }],
-        // },
-        //     {
-        //     // Global configuration for all images
-        //     // The output quality for JPEG, WebP and TIFF output formats
-        //     quality: 70,
-        //         // Use progressive (interlace) scan for JPEG and PNG output
-        //         progressive: true,
-        //     // Strip all metadata
-        //     withMetadata: false,
-        //      }))
 
         .pipe(imagemin({
             progressive: true,
@@ -203,7 +201,7 @@ function watch() {
 
 exports.templates = templates;
 exports.images = images;
-exports.responsive1 = responsive1;
+exports.respons = respons;
 exports.favicon = favicon;
 exports.styles = styles;
 exports.styles2 = styles2;
@@ -225,5 +223,5 @@ gulp.task('default', gulp.series(
 
 gulp.task('build', gulp.series(
     gulp.series(clearDst),
-    gulp.parallel(styles, scriptsMin, templates, favicon, fonts, images, svgSpriteBuild)
+    gulp.parallel(styles, scriptsMin, templates, favicon, fonts, respons, svgSpriteBuild)
 ));

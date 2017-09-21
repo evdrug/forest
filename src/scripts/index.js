@@ -1,5 +1,4 @@
 
-
 var btnAvt = document.getElementsByClassName('btn-avt'),
     blockAvt = document.getElementsByClassName('welcome__form-wrapper'),
     btnIndex = document.getElementsByClassName('index'),
