@@ -17,6 +17,21 @@ html,body{
 
 }
 
+
+//preloader
+#preloader-page {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #FFF;
+  background-image: url(../images/preloader/forest_preloader.gif);
+  background-position: center;
+  background-size: cover;
+  z-index: 100500;
+}
+
 .none {
   transform: scale(0);
   transition: 1s;

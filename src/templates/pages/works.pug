@@ -72,18 +72,25 @@ block content
                             section.section__block-2
                                 .slider-works
                                     .slider-works__body
-                                        img.slider-works__img(src="./images/content/bg-1.jpg")
+                                        picture.slider-works__picture
+                                            source(srcset="./images/content/bg-1.jpg, ./images/content/bg-1@2x.jpg 2x, ./images/content/bg-1@3x.jpg 3x" media="(max-width: 768px)")
+                                            img.slider-works__img(src="./images/content/bg-1@3x.jpg" )
+
 
                             section.section__block-3
                                 .slider-works__menu
                                     .slider-works__prev-img
-                                        img.slider-works__img-pic(src="./images/content/bg-2.jpg")
+                                        picture.slider-works__picture
+                                            source(srcset="./images/content/bg-2.jpg, ./images/content/bg-2@2x.jpg 2x, ./images/content/bg-2@3x.jpg 3x" media="(max-width: 768px)")
+                                            img.slider-works__img(src="./images/content/bg-2@3x.jpg" )
                                         .slider-works__prev
                                             | <svg class="slider__arrow_down">
                                             | <use xlink:href="./images/svg/symbols.svg#portf_arrow_down"></use>
                                             | </svg>
                                     .slider-works__next-img
-                                        img.slider-works__img-pic(src="./images/content/bg-3.jpg")
+                                        picture.slider-works__picture
+                                            source(srcset="./images/content/bg-3.jpg, ./images/content/bg-3@2x.jpg 2x, ./images/content/bg-3@3x.jpg 3x" media="(max-width: 768px)")
+                                            img.slider-works__img(src="./images/content/bg-3@3x.jpg" )
                                         .slider-works__next
                                             | <svg class="slider__arrow_up">
                                             | <use xlink:href="./images/svg/symbols.svg#portf_arrow_up"></use>

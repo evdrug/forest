@@ -138,6 +138,11 @@ function scripts() {
         .pipe(gulp.dest(paths.scripts.dest));
 }
 
+function scripts2() {
+    return gulp.src('./src/scripts/water.js')
+        .pipe(gulp.dest(paths.scripts.dest));
+}
+
 function scriptsMin() {
     return gulp.src(paths.scripts.src)
         .pipe(gulpWebpack(require('./webpack.config.js'), webpack))
@@ -206,6 +211,7 @@ exports.favicon = favicon;
 exports.styles = styles;
 exports.styles2 = styles2;
 exports.scripts = scripts;
+exports.scripts2 = scripts2;
 exports.fonts = fonts;
 exports.scriptsMin = scriptsMin;
 exports.svgSpriteBuild = svgSpriteBuild;
@@ -217,11 +223,11 @@ exports.clear = clear;
 
 gulp.task('default', gulp.series(
     gulp.series(clear),
-    gulp.parallel(styles, scripts, templates),
+    gulp.parallel(styles, scripts, scripts2, templates),
     gulp.parallel( watch,server)
 ));
 
 gulp.task('build', gulp.series(
     gulp.series(clearDst),
-    gulp.parallel(styles, scriptsMin, templates, favicon, fonts, respons, svgSpriteBuild)
+    gulp.parallel(styles, scriptsMin, scripts2, templates, favicon, fonts, respons, svgSpriteBuild)
 ));

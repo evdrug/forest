@@ -167,6 +167,9 @@
   width: 100%;
   //max-height: 525px;
 }
+.slider-works__picture {
+  width: 100%;
+}
 
 .slider-works__menu {
   display: flex;
@@ -181,6 +184,7 @@
   justify-content:center;
   align-items: center;
   position: relative;
+  overflow: hidden;
 
 
   &:after {
@@ -242,12 +246,20 @@
 
 .section__reviews {
   width: 100%;
-  background-image: url("../images/bg/bg-1.png");
+  background-image: url("../images/bg/bg-1@3x.png");
+
+
   background-size: cover;
   //height: 1350px;
   background-position: bottom;
   padding-top: 70px;
   padding-bottom: 220px;
+
+  @include media_768 {
+    background-image: image-set("../images/bg/bg-1.png" 1x,
+            "../images/bg/bg-1@2x.png" 2x,
+            "../images/bg/bg-1@3x.png" 3x);
+  }
 
   @include media_480 {
     padding-bottom: 350px;
