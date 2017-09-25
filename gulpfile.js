@@ -28,7 +28,7 @@ const paths = {
         dest: 'dst/css/'
     },
     scripts: {
-        src: 'src/scripts/**/index.js',
+        src: 'src/scripts/**/*.js',
         dest: 'dst/js/'
     },
     templates: {
@@ -127,7 +127,7 @@ function styles2() {
 }
 
 function scripts() {
-    return gulp.src(paths.scripts.src)
+    return gulp.src('./src/scripts/index.js')
         .pipe(gulpWebpack({
             output: {
                 filename: 'bundle.js'
@@ -144,7 +144,7 @@ function scripts2() {
 }
 
 function scriptsMin() {
-    return gulp.src(paths.scripts.src)
+    return gulp.src('./src/scripts/index.js')
         .pipe(gulpWebpack(require('./webpack.config.js'), webpack))
 
         .pipe(gulp.dest(paths.scripts.dest));

@@ -65,13 +65,24 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
+
+
+__webpack_require__(1);
+__webpack_require__(2);
+
+
+
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
 
 var btnAvt = document.getElementsByClassName('btn-avt'),
     blockAvt = document.getElementsByClassName('welcome__form-wrapper'),
     btnIndex = document.getElementsByClassName('index'),
-    btnHumb = document.getElementsByClassName('hamburger__link'),
     menHumb = document.getElementsByClassName('menu-hamb'),
     iconHumb = document.getElementsByClassName('hamburger'),
     preloader = document.getElementById('preloader-page');
@@ -83,13 +94,14 @@ window.onload = ()=> {
 
 
 
+    var btnHumb = document.getElementsByClassName('hamburger__link');
 
-        btnAvt = btnAvt[0];
-        blockAvt = blockAvt[0];
-        btnIndex = btnIndex[0];
-        btnHumb =   btnHumb[0];
-        menHumb = menHumb[0];
-        iconHumb = iconHumb[0];
+    btnAvt = btnAvt[0];
+    blockAvt = blockAvt[0];
+    btnIndex = btnIndex[0];
+    btnHumb =   btnHumb[0];
+    menHumb = menHumb[0];
+    iconHumb = iconHumb[0];
 
 
 
@@ -112,29 +124,43 @@ window.onload = ()=> {
     }
 
 
-    btnHumb.onclick = function (e) {
-        e.preventDefault();
+    if(btnHumb) {
+        btnHumb.onclick = function (e) {
+            e.preventDefault();
 
-        menuHambItems = document.getElementsByClassName('menu-hamb__item');
-        iconHumbAct = document.getElementsByClassName('hamburger_active');
-        if(iconHumbAct[0]) {
-            menHumb.classList.remove('menu-hamb_active')
-            iconHumb.classList.remove('hamburger_active');
-            document.body.style.overflow = 'auto';
-        }else{
-            menHumb.classList.add('menu-hamb_active')
-            iconHumb.classList.add('hamburger_active');
-            document.body.style.overflow = 'hidden';
-            if(menuHambItems){
-                for (var i = 0; i < menuHambItems.length; ++i) {
-                    menuHambItems[i].setAttribute('style', `animation-delay: 0.${5+i}s;`);
+            menuHambItems = document.getElementsByClassName('menu-hamb__item');
+            iconHumbAct = document.getElementsByClassName('hamburger_active');
+            if(iconHumbAct[0]) {
+                menHumb.classList.remove('menu-hamb_active')
+                iconHumb.classList.remove('hamburger_active');
+                document.body.style.overflow = 'auto';
+            }else{
+                menHumb.classList.add('menu-hamb_active')
+                iconHumb.classList.add('hamburger_active');
+                document.body.style.overflow = 'hidden';
+                if(menuHambItems){
+                    for (var i = 0; i < menuHambItems.length; ++i) {
+                        menuHambItems[i].setAttribute('style', `animation-delay: 0.${5+i}s;`);
+                    }
                 }
             }
-        }
 
+        }
     }
 }
 
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+ var totalBg = document.body.getElementsByTagName('*');
+
+
+console.log(totalBg);
+//
+// for( var i =1; i<=totalBg.length; i++) {
+//     totalBg[i].load(console.log(i/totalBg.length*100));
+// }
 
 
 /***/ })
