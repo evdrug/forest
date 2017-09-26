@@ -32,7 +32,6 @@ window.onload = ()=> {
     arrowUp = arrowUp[0];
     titleH1 = titleH1[0];
     worksWrapper = worksWrapper[0];
-    var pos = titleH1.getBoundingClientRect();
 
 
 
@@ -84,11 +83,15 @@ window.onload = ()=> {
         }
     }
 
+    if (titleH1){
+        var pos = titleH1.getBoundingClientRect();
+        var coord = pos.top+pos.height-20;
+    }
+
     if(btnArrow){
         btnArrow.onclick = function (e) {
             e.preventDefault();
             windPos = window.pageYOffset;
-            var coord = pos.top+pos.height-20;
             var top = windPos;
             var scr = setInterval(function () {
                 top += 5;
@@ -103,7 +106,6 @@ window.onload = ()=> {
         arrowUp.onclick = function (e) {
             e.preventDefault();
             windPos = window.pageYOffset;
-            var coord = pos.top+pos.height-20;
             var scr = setInterval(function () {
                 windPos -= 5;
                 window.scrollTo(0, windPos);
