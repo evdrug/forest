@@ -415,7 +415,11 @@
   color: #5d5a55;
   font-weight: 400;
   outline:none;
+  border: 2px solid  transparent;
 
+  &:focus {
+    border: 2px solid  $colorBtn;
+  }
   @include media_480 {
     height: 40px;
   }
@@ -433,6 +437,11 @@
   outline:none;
   resize: none;
   overflow: hidden;
+  border: 2px solid  transparent;
+
+  &:focus {
+    border: 2px solid  $colorBtn;
+  }
 }
 
 .contact-form__btns {
