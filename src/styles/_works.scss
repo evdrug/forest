@@ -95,6 +95,8 @@
 
   @include media_768 {
     width: 100%;
+    padding-left: 2px;
+    padding-right: 2px;
   }
 }
 .school__text {

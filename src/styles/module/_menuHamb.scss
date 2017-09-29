@@ -8,6 +8,17 @@
   }
 }
 
+.menu-hamb {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+.menu-hamb__wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
 
 .menu-hamb__item_active .menu-hamb__link:after {
   width: 89px;
@@ -92,6 +103,7 @@
   }
 }
 
+
 .menu-hamb__left {
   position: absolute;
   left: 0;
@@ -120,6 +132,7 @@
 
 
 .menu-hamb_active {
+
 
   .menu-hamb__link {
     font-size: 35px;

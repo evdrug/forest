@@ -8,10 +8,7 @@ var btnAvt = document.getElementsByClassName('btn-avt'),
     formInput = document.getElementsByClassName('fotm__input-text'),
     btnArrow = document.getElementsByClassName('btn-arrow'),
     arrowUp = document.getElementsByClassName('arrow_up'),
-    // titleH1 = document.getElementsByTagName('h1');
-    titleH1 = document.getElementsByClassName('block-triangle'),
-    worksWrapper = document.getElementsByClassName('works-wrapper');
-
+    titleH1 = document.getElementsByClassName('block-triangle');
 
 
 window.onload = ()=> {
@@ -31,7 +28,6 @@ window.onload = ()=> {
     btnArrow = btnArrow[0];
     arrowUp = arrowUp[0];
     titleH1 = titleH1[0];
-    worksWrapper = worksWrapper[0];
 
 
 
@@ -83,15 +79,13 @@ window.onload = ()=> {
         }
     }
 
-    if (titleH1){
-        var pos = titleH1.getBoundingClientRect();
-        var coord = pos.top+pos.height-20;
-    }
 
     if(btnArrow){
         btnArrow.onclick = function (e) {
             e.preventDefault();
+            var pos = titleH1.getBoundingClientRect();
             windPos = window.pageYOffset;
+            var coord = windPos+pos.top + pos.height-20;
             var top = windPos;
             var scr = setInterval(function () {
                 top += 5;
@@ -105,7 +99,10 @@ window.onload = ()=> {
     if(arrowUp){
         arrowUp.onclick = function (e) {
             e.preventDefault();
+            var pos = titleH1.getBoundingClientRect();
             windPos = window.pageYOffset;
+            var coord = windPos + pos.top+pos.height-15;
+            console.log(pos);
             var scr = setInterval(function () {
                 windPos -= 5;
                 window.scrollTo(0, windPos);

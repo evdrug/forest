@@ -47,12 +47,13 @@
 }
 
 .name-content__label_sz {
-  width: 1176px;
-  @include media_768 {
-    width: 537px;
-  }
-
+  //width: 1176px;
+  //@include media_768 {
+  //  width: 537px;
+  //}
+  min-width: 100vw;
   @include media_480 {
+    min-width: 0;
     width: 0;
   }
 }
@@ -124,6 +125,7 @@
 .header {
   width: 100%;
   min-height: 513px;
+  height: 100vh;
   background-image: url(../images/bg/bg-water@3x.jpg);
   background-position: center;
   -webkit-background-size: cover;
@@ -159,6 +161,8 @@
   width: 100%;
   height: 100%;
   //padding-top: 80px;
+  display: flex;
+  align-items:center;
 
 }
 
