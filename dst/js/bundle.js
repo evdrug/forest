@@ -68,9 +68,9 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 
-
 __webpack_require__(1);
 __webpack_require__(2);
+__webpack_require__(3);
 
 
 
@@ -208,6 +208,31 @@ console.log(totalBg);
 // for( var i =1; i<=totalBg.length; i++) {
 //     totalBg[i].load(console.log(i/totalBg.length*100));
 // }
+
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+var pageActive = window.location.pathname;
+if(-1 !== pageActive.indexOf('about')){
+    var skill = document.getElementsByClassName('skill__row');
+    var skillElements = [];
+    for (var i=0;i<skill.length; i++){
+        skillElements[i] = skill[i];
+    }
+    window.onscroll= () =>{
+        skillElements.forEach(function (element, index, skillElements){
+            var elPos = element.getBoundingClientRect()
+            var activeEl = elPos.top+elPos.height - (window.innerHeight) ;
+            if (activeEl<0){
+                skillElements[index].classList.add('active');
+                delete skillElements[index];
+            }
+        })
+    }
+}
+
 
 
 /***/ })
