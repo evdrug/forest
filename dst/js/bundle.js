@@ -75,9 +75,9 @@ if(-1 !== pageActive.indexOf('about')){
     __webpack_require__(3);
 } else if(-1 !== pageActive.indexOf('works')){
     __webpack_require__(4);
-    // require('./revieValidate');
-} else if(-1 !== pageActive.indexOf('blog')){
     __webpack_require__(5);
+} else if(-1 !== pageActive.indexOf('blog')){
+    __webpack_require__(6);
 }
 
 
@@ -250,7 +250,6 @@ window.onscroll= () =>{
     skillElements.forEach(function (element, index, skillElements){
         var elPos = element.getBoundingClientRect()
         var activeEl = elPos.top+elPos.height - (window.innerHeight) ;
-        console.log(elPos.top,elPos.height,window.innerHeight);
 
         if (activeEl<0){
             skillElements[index].classList.add('active');
@@ -385,6 +384,23 @@ sliderImagesNext.onclick = function () {
 /* 5 */
 /***/ (function(module, exports) {
 
+var form = document.getElementsByClassName('contact-form')[0];
+var revInput = form.getElementsByClassName('js-form__input');
+var revEnter = form.getElementsByClassName('js-form__btn_enter')[0];
+
+revEnter.onclick = function(e){
+    e.preventDefault();
+    for(var i =0;i<revInput.length;i++){
+        if(!revInput[i].value){
+            console.log(revInput[i].value='не заполнено поле');
+        }
+    }
+}
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
 var headerPos = document.getElementsByClassName('header')[0].getBoundingClientRect();
 var headerHeight = headerPos.height;
 var blockLeft = document.getElementsByClassName('block-left')[0]
@@ -392,9 +408,7 @@ var menuFixLink = document.getElementsByClassName('block-left__link')[0];
 
 
 menuFixLink.onclick = ()=>{
-    console.log(blockLeft.classList.value);
     blockLeft.classList.value !== 'block-left block-left_active' ? blockLeft.classList.add('block-left_active') : blockLeft.classList.remove('block-left_active')
-    console.log(blockLeft);
 
 }
 

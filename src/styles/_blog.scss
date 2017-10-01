@@ -42,22 +42,17 @@
 
 
   @include media_768 {
-    width: 0;
+    width: 70%;
     height: 100%;
     position: fixed;
     top: 0;
-    left: 0;
+    left: -70%;
     background-color:  rgba(115,146,88, .9);
     z-index: 3;
     display: flex;
     align-items:center;
     transition: .5s;
     margin-right: 0;
-    .nav-article {
-      width: 0;
-      transition: .5s;
-
-    }
 
   }
 
@@ -85,11 +80,14 @@
 .block-left_active{
   padding-right: 5px;
   width: 50%;
+  left: 0;
   transition: 1s;
   @include media_480 {
     width: 70%;
   }
   .nav-article {
+    padding-right: 20px;
+
     width: 100%;
     transition: .5s;
   }
