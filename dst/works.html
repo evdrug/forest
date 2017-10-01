@@ -15,6 +15,8 @@
       <div class="preloader-page__svg">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
              width="80px" height="95.113px" viewBox="0 0 80 95.113" enable-background="new 0 0 80 95.113" xml:space="preserve">
+         <text class="text-svg-prel js-text-svg-prel" transform="matrix(1 0 0 1 19.9785 20.5957)" font-family="'ArialMT'" font-size="24">0%</text>
+        
         <g>
             <path class="path-line1" fill="none" stroke="#231F20" stroke-width="3.9003" stroke-miterlimit="10" d="M0,38.005c6.663,0,6.663,7.801,13.327,7.801
                 c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801
@@ -30,12 +32,11 @@
                 c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801
                 c6.67,0,6.67,7.801,13.339,7.801S73.33,85.362,80,85.362"/>
         </g>
-        <text class="text-svg-prel" transform="matrix(1 0 0 1 19.9785 20.5957)" font-family="'ArialMT'" font-size="24">50%</text>
         </svg>
       </div>
     </div>
     <div class="wrapper-page">
-      <div class="menu-hamb">
+      <div class="menu-hamb js-menu-hamb">
         <div class="menu-hamb__wrapper">
           <div class="menu-hamb__left"></div>
           <div class="menu-hamb__right"></div>
@@ -78,7 +79,7 @@
               </div>
             </div>
             <div class="header__menu">
-              <div class="hamburger"><a class="hamburger__link" href="">
+              <div class="hamburger js-hamburger"><a class="hamburger__link" href="">
                   <div class="hamburger__img"></div></a></div>
             </div>
             <div class="header__user">
@@ -125,15 +126,15 @@
               <div class="wrapper-block">
                 <div class="block">
                   <section class="section__block-1">
-                    <div class="school">
+                    <div class="school js-school">
                       <div class="school__title">
-                        <div class="name-content name-content_color nc-s__sz">
+                        <div class="name-content name-content_color nc-s__sz js-slider__title">
                           Сайт школы онлайн
                           Образования
                         </div>
                       </div>
-                      <div class="school__text">HTML , CSS, JAVASCRIPT</div>
-                      <div class="scholl__link-wrapper"><a class="scholl__link" href="https://loftschool.com" target="_blanc">Посмотреть сайт
+                      <div class="school__text js-slider__tags">HTML , CSS, JAVASCRIPT</div>
+                      <div class="scholl__link-wrapper"><a class="scholl__link js-slider__link" href="https://loftschool.com" target="_blanc">Посмотреть сайт
                           <div class="scholl__link-img">
                             <svg class="scholl-img">
                             <use xlink:href="./images/svg/symbols.svg#link"></use>
@@ -144,7 +145,7 @@
                   <section class="section__block-2">
                     <div class="slider-works">
                       <div class="slider-works__body">
-                        <picture class="slider-works__picture">
+                        <picture class="slider-works__picture js-slider__images">
                           <source srcset="./images/content/bg-1.jpg, ./images/content/bg-1@2x.jpg 2x, ./images/content/bg-1@3x.jpg 3x" media="(max-width: 768px)"><img class="slider-works__img" src="./images/content/bg-1@3x.jpg">
                         </picture>
                       </div>
@@ -152,7 +153,7 @@
                   </section>
                   <section class="section__block-3">
                     <div class="slider-works__menu">
-                      <div class="slider-works__prev-img">
+                      <div class="slider-works__prev-img js-slider__images-prev">
                         <picture class="slider-works__picture">
                           <source srcset="./images/content/bg-2.jpg, ./images/content/bg-2@2x.jpg 2x, ./images/content/bg-2@3x.jpg 3x" media="(max-width: 768px)"><img class="slider-works__img" src="./images/content/bg-2@3x.jpg">
                         </picture>
@@ -162,7 +163,7 @@
                           </svg>
                         </div>
                       </div>
-                      <div class="slider-works__next-img">
+                      <div class="slider-works__next-img js-slider__images-next">
                         <picture class="slider-works__picture">
                           <source srcset="./images/content/bg-3.jpg, ./images/content/bg-3@2x.jpg 2x, ./images/content/bg-3@3x.jpg 3x" media="(max-width: 768px)"><img class="slider-works__img" src="./images/content/bg-3@3x.jpg">
                         </picture>
@@ -218,16 +219,16 @@
                   <form class="contact-form">
                     <div class="contact-form__title name-content name-content_color nc-s__sz">Связаться со мной</div>
                     <div class="form__row">
-                      <input class="contact-form__input" type="text" placeholder="Имя">
+                      <input class="contact-form__input js-form__input" type="text" placeholder="Имя">
                     </div>
                     <div class="form__row">
-                      <input class="contact-form__input" type="email" placeholder="Email">
+                      <input class="contact-form__input js-form__input" type="email" placeholder="Email">
                     </div>
                     <div class="form__row">
-                      <textarea class="contact-form__area" placeholder="Ваше сообщение"></textarea>
+                      <textarea class="contact-form__area js-form__input" placeholder="Ваше сообщение"></textarea>
                     </div>
                     <div class="contact-form__btns">
-                      <button class="contact-form__btn" type="submit">Отправить</button>
+                      <button class="contact-form__btn js-form__btn_enter" type="submit">Отправить</button>
                       <button class="contact-form__btn" type="reset">Очистить</button>
                     </div>
                   </form>

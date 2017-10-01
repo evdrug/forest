@@ -12,7 +12,7 @@ block content
                 .header__social
                     include ../module/social
                 .header__menu
-                    .hamburger
+                    .hamburger.js-hamburger
                         a.hamburger__link(href="")
                             .hamburger__img
                 .header__user
@@ -55,15 +55,15 @@ block content
                     .wrapper-block
                          .block
                             section.section__block-1
-                                .school
+                                .school.js-school
                                     .school__title
-                                        .name-content.name-content_color.nc-s__sz
+                                        .name-content.name-content_color.nc-s__sz.js-slider__title
                                             |Сайт школы онлайн
                                             |Образования
-                                    .school__text
+                                    .school__text.js-slider__tags
                                         |HTML , CSS, JAVASCRIPT
                                     .scholl__link-wrapper
-                                        a.scholl__link(href="https://loftschool.com" target="_blanc")
+                                        a.scholl__link.js-slider__link(href="https://loftschool.com" target="_blanc")
                                             |Посмотреть сайт
                                             .scholl__link-img
                                                 | <svg class="scholl-img">
@@ -72,14 +72,14 @@ block content
                             section.section__block-2
                                 .slider-works
                                     .slider-works__body
-                                        picture.slider-works__picture
+                                        picture.slider-works__picture.js-slider__images
                                             source(srcset="./images/content/bg-1.jpg, ./images/content/bg-1@2x.jpg 2x, ./images/content/bg-1@3x.jpg 3x" media="(max-width: 768px)")
                                             img.slider-works__img(src="./images/content/bg-1@3x.jpg" )
 
 
                             section.section__block-3
                                 .slider-works__menu
-                                    .slider-works__prev-img
+                                    .slider-works__prev-img.js-slider__images-prev
                                         picture.slider-works__picture
                                             source(srcset="./images/content/bg-2.jpg, ./images/content/bg-2@2x.jpg 2x, ./images/content/bg-2@3x.jpg 3x" media="(max-width: 768px)")
                                             img.slider-works__img(src="./images/content/bg-2@3x.jpg" )
@@ -87,7 +87,7 @@ block content
                                             | <svg class="slider__arrow_down">
                                             | <use xlink:href="./images/svg/symbols.svg#portf_arrow_down"></use>
                                             | </svg>
-                                    .slider-works__next-img
+                                    .slider-works__next-img.js-slider__images-next
                                         picture.slider-works__picture
                                             source(srcset="./images/content/bg-3.jpg, ./images/content/bg-3@2x.jpg 2x, ./images/content/bg-3@3x.jpg 3x" media="(max-width: 768px)")
                                             img.slider-works__img(src="./images/content/bg-3@3x.jpg" )
@@ -131,13 +131,13 @@ block content
                                 .contact-form__title.name-content.name-content_color.nc-s__sz
                                     |Связаться со мной
                                 .form__row
-                                    input.contact-form__input(type="text" placeholder="Имя")
+                                    input.contact-form__input.js-form__input(type="text" placeholder="Имя")
                                 .form__row
-                                    input.contact-form__input(type="email" placeholder="Email")
+                                    input.contact-form__input.js-form__input(type="email" placeholder="Email")
                                 .form__row
-                                    textarea.contact-form__area(placeholder="Ваше сообщение")
+                                    textarea.contact-form__area.js-form__input(placeholder="Ваше сообщение")
                                 .contact-form__btns
-                                    button.contact-form__btn(type="submit")|Отправить
+                                    button.contact-form__btn.js-form__btn_enter(type="submit")|Отправить
                                     button.contact-form__btn(type="reset")|Очистить
 
                     .reviews__btn-up

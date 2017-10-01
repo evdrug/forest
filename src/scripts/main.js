@@ -1,11 +1,10 @@
-var btnAvt = document.getElementsByClassName('btn-avt'),
-    blockAvt = document.getElementsByClassName('welcome__form-wrapper'),
-    btnIndex = document.getElementsByClassName('index'),
-    menHumb = document.getElementsByClassName('menu-hamb'),
-    iconHumb = document.getElementsByClassName('hamburger'),
+var btnAvt = document.getElementsByClassName('js-btn-avt'),
+    blockAvt = document.getElementsByClassName('js-welcome__form-wrapper'),
+    btnIndex = document.getElementsByClassName('js-index'),
+    menHumb = document.getElementsByClassName('js-menu-hamb'),
+    iconHumb = document.getElementsByClassName('js-hamburger'),
     preloader = document.getElementById('preloader-page'),
-    bg = document.getElementsByClassName('flipp'),
-    formInput = document.getElementsByClassName('fotm__input-text'),
+    bg = document.getElementsByClassName('js-flipp'),
     btnArrow = document.getElementsByClassName('btn-arrow'),
     arrowUp = document.getElementsByClassName('arrow_up'),
     titleH1 = document.getElementsByClassName('block-triangle');
@@ -24,7 +23,6 @@ window.onload = ()=> {
     menHumb = menHumb[0];
     iconHumb = iconHumb[0];
     bg = bg[0];
-    formInput = formInput[0];
     btnArrow = btnArrow[0];
     arrowUp = arrowUp[0];
     titleH1 = titleH1[0];
@@ -102,7 +100,6 @@ window.onload = ()=> {
             var pos = titleH1.getBoundingClientRect();
             windPos = window.pageYOffset;
             var coord = windPos + pos.top+pos.height-15;
-            console.log(pos);
             var scr = setInterval(function () {
                 windPos -= 5;
                 window.scrollTo(0, windPos);
