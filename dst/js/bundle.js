@@ -245,8 +245,6 @@ for (var i=0;i<skill.length; i++){
     skillElements[i] = skill[i];
 }
 window.onscroll= () =>{
-    console.log(skillElements);
-
     skillElements.forEach(function (element, index, skillElements){
         var elPos = element.getBoundingClientRect()
         var activeEl = elPos.top+elPos.height - (window.innerHeight) ;
