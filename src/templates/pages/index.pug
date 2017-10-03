@@ -44,26 +44,30 @@ block content
                             .name-content.nc-s__sz
                                 |Авторизуйтесь
                         .avt__form
-                            form.form
+                            form.form.js-form-aut
                                 .form__row
                                     label.form__label-input
                                         .form__pic
                                             |<svg class="form__img-login">
                                             |<use xlink:href="./images/svg/symbols.svg#login"></use>
                                             |</svg>
-                                        input.fotm__input-text(type="text" placeholder="Логин")
+                                        input.fotm__input-text.js-form-input(type="text" placeholder="Логин")
+                                        .error-text
                                 .form__row
                                     label.form__label-input
                                         .form__pic
                                             |<svg class="form__img-login">
                                             | <use xlink:href="./images/svg/symbols.svg#password"></use>
                                             | </svg>
-                                        input.fotm__input-text(type="text" placeholder="Пароль")
+                                        input.fotm__input-text.js-form-input(type="password" placeholder="Пароль")
+                                        .error-text
                                 .form__row
                                     label.form__label-checkbox
                                         input.fotm__check(type="checkbox")
-                                        .form__check-fake
+                                        .form__check-fake.js-form-input
+                                        .error-text
                                         .form__check-text|Я человек
+
                                 .form__row.radio
                                     .radio__title
                                         |Вы точно не робот?
@@ -76,6 +80,7 @@ block content
                                             input.radio__btn(type="radio" name="robot" value="yes")
                                             .radio__btn-fake
                                             .radio__text|Не уверен
+                                            .error-text
                                 .form__menu
                                     .menu-avt
                                         ul.menu-avt__list
@@ -83,7 +88,7 @@ block content
                                                 a.menu-avt__link.index.js-index(href="#")
                                                     |На главную
                                             li.menu-avt__items
-                                                a.menu-avt__link.signin(href="#")
+                                                a.menu-avt__link.js-signin(href="#")
                                                     |Войти
 
             .welcome__footer

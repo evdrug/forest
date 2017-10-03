@@ -105,7 +105,7 @@
                   <div class="name-content nc-s__sz">Авторизуйтесь</div>
                 </div>
                 <div class="avt__form">
-                  <form class="form">
+                  <form class="form js-form-aut">
                     <div class="form__row">
                       <label class="form__label-input">
                         <div class="form__pic">
@@ -113,7 +113,8 @@
                           <use xlink:href="./images/svg/symbols.svg#login"></use>
                           </svg>
                         </div>
-                        <input class="fotm__input-text" type="text" placeholder="Логин">
+                        <input class="fotm__input-text js-form-input" type="text" placeholder="Логин">
+                        <div class="error-text"></div>
                       </label>
                     </div>
                     <div class="form__row">
@@ -123,13 +124,15 @@
                           <use xlink:href="./images/svg/symbols.svg#password"></use>
                           </svg>
                         </div>
-                        <input class="fotm__input-text" type="text" placeholder="Пароль">
+                        <input class="fotm__input-text js-form-input" type="password" placeholder="Пароль">
+                        <div class="error-text"></div>
                       </label>
                     </div>
                     <div class="form__row">
                       <label class="form__label-checkbox">
                         <input class="fotm__check" type="checkbox">
-                        <div class="form__check-fake"></div>
+                        <div class="form__check-fake js-form-input"></div>
+                        <div class="error-text"></div>
                         <div class="form__check-text">Я человек</div>
                       </label>
                     </div>
@@ -145,6 +148,7 @@
                           <input class="radio__btn" type="radio" name="robot" value="yes">
                           <div class="radio__btn-fake"></div>
                           <div class="radio__text">Не уверен</div>
+                          <div class="error-text"></div>
                         </label>
                       </div>
                     </div>
@@ -152,7 +156,7 @@
                       <div class="menu-avt">
                         <ul class="menu-avt__list">
                           <li class="menu-avt__items"><a class="menu-avt__link index js-index" href="#">На главную</a></li>
-                          <li class="menu-avt__items"><a class="menu-avt__link signin" href="#">Войти</a></li>
+                          <li class="menu-avt__items"><a class="menu-avt__link js-signin" href="#">Войти</a></li>
                         </ul>
                       </div>
                     </div>
