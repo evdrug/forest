@@ -1,6 +1,6 @@
-var skill = document.getElementsByClassName('js-skill__row');
+var skill = document.getElementsByClassName('js-skill-row');
 var skillElements = [];
-for (var i=0;i<skill.length; i++){
+for (var i = 0;i < skill.length; i++){
     skillElements[i] = skill[i];
 }
 window.onscroll= () =>{

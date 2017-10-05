@@ -9,7 +9,7 @@ menuFixLink.onclick = ()=>{
 
 }
 
-var articles = document.getElementsByClassName('js-block-right_articles');
+var articles = document.getElementsByClassName('js-block-right-articles');
 var articlesChild = articles[0].children;
 var menuLink = document.getElementsByClassName('nav-article__items');
 

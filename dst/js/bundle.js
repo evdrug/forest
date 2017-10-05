@@ -90,7 +90,7 @@ if(-1 !== pageActive.indexOf('about')){
 /***/ (function(module, exports) {
 
 var btnAvt = document.getElementsByClassName('js-btn-avt'),
-    blockAvt = document.getElementsByClassName('js-welcome__form-wrapper'),
+    blockAvt = document.getElementsByClassName('js-welcome-form-wrapper'),
     btnIndex = document.getElementsByClassName('js-index'),
     menHumb = document.getElementsByClassName('js-menu-hamb'),
     iconHumb = document.getElementsByClassName('js-hamburger'),
@@ -174,7 +174,7 @@ window.onload = ()=> {
             e.preventDefault();
             var pos = titleH1.getBoundingClientRect();
             windPos = window.pageYOffset;
-            var coord = windPos+pos.top + pos.height-20;
+            var coord = windPos+pos.top + pos.height - 20;
             var top = windPos;
             var scr = setInterval(function () {
                 top += 5;
@@ -190,7 +190,7 @@ window.onload = ()=> {
             e.preventDefault();
             var pos = titleH1.getBoundingClientRect();
             windPos = window.pageYOffset;
-            var coord = windPos + pos.top+pos.height-15;
+            var coord = windPos + pos.top+pos.height - 15;
             var scr = setInterval(function () {
                 windPos -= 5;
                 window.scrollTo(0, windPos);
@@ -211,7 +211,7 @@ textProc = textProc[0];
 var array=[];
  var totalBg = document.getElementsByTagName('*')
 
- for(var i=0; i<totalBg.length;i++){
+ for(var i = 0; i < totalBg.length; i++){
      var urlIm = totalBg[i].style.backgroundImage,
          urlSrc = totalBg[i].getAttribute('src');
 
@@ -226,11 +226,11 @@ var array=[];
      if(urlSrc) array.push(totalBg[i]);
  }
 
-for (var i = 0; i<array.length;i++) {
-     var proc=0;
+for (var i = 0; i < array.length; i++) {
+     var proc = 0;
      array[i].onload=()=>{
-         proc+=100/array.length;
-         textProc.innerHTML = Math.round(proc-1)+'%'
+         proc += 100/array.length;
+         textProc.innerHTML = Math.round(proc -1 ) + '%'
      }
  }
 
@@ -245,8 +245,8 @@ var preg = /^[\w\.\d-_]+@[\w\.\d-_]+\.\w{2,4}$/i;
 var formAut = document.getElementsByClassName('js-form-aut')[0];
 
 function inputOnfocus(collection) {
-    for (var z = 0; z< collection.length; z++) {
-        collection[z].onfocus =function (e) {
+    for (var z = 0; z < collection.length; z++) {
+        collection[z].onfocus = function (e) {
             this.nextElementSibling.setAttribute('style', 'display: none');
             this.classList.remove('error-input');
         }
@@ -256,7 +256,7 @@ function inputOnfocus(collection) {
 function validateInput(input) {
     if (!input.value){
         input.classList.add('error-input');
-        input.nextElementSibling.innerHTML="Не заполнено поле"
+        input.nextElementSibling.innerHTML = "Не заполнено поле"
         input.nextElementSibling.setAttribute('style', 'display: inline-block')
         return 0
     }else{
@@ -267,7 +267,7 @@ function validateInput(input) {
 function validateEmail(inputEmail) {
     if (inputEmail.value && !inputEmail.value.match(preg)){
         inputEmail.classList.add('error-input');
-        inputEmail.nextElementSibling.innerHTML="Не корректный email"
+        inputEmail.nextElementSibling.innerHTML = "Не корректный email"
         inputEmail.nextElementSibling.setAttribute('style', 'display: inline-block')
         return 0
     }else{
@@ -278,7 +278,7 @@ function validateEmail(inputEmail) {
 function validateCheckBox(checked,message) {
     if (!checked.checked){
         checked.parentNode.classList.add('error-input-checked');
-        checked.previousElementSibling.innerHTML=message;
+        checked.previousElementSibling.innerHTML = message;
         checked.previousElementSibling.setAttribute('style', 'display: inline-block')
         return 0
     }else{
@@ -289,7 +289,7 @@ function validateCheckBox(checked,message) {
 function validateCheckRbtn(checked,message) {
     if (!checked.checked){
         checked.parentNode.classList.add('error-rbtn-checked');
-        checked.previousElementSibling.innerHTML=message;
+        checked.previousElementSibling.innerHTML = message;
         checked.previousElementSibling.setAttribute('style', 'display: inline-block')
         return 0
     }else{
@@ -299,7 +299,7 @@ function validateCheckRbtn(checked,message) {
 
 function clearError(error) {
     error.classList.remove('error-input');
-    error.nextElementSibling.innerHTML=""
+    error.nextElementSibling.innerHTML = ""
     error.nextElementSibling.setAttribute('style', 'display: none')
 }
 
@@ -348,18 +348,18 @@ if(formAut) {
     var revInput = formAut.getElementsByClassName('js-form-input');
     var checkBot = formAut.getElementsByClassName('js-checkbox')[0];
     var checkRbtn = formAut.getElementsByClassName('js-form-rbtn')[0];
-    var checkBotBox = checkBot.getElementsByClassName('fotm__check')[0];
+    var checkBotBox = checkBot.getElementsByClassName('js-fotm-check')[0];
     var checkRbtnBox = checkRbtn.parentNode;
     inputOnfocus(avtInput);
 
     signIn.onclick = function(e){
         e.preventDefault();
-        for(var i =0;i<revInput.length;i++){
+        for(var i = 0; i < revInput.length; i++){
             clearError(revInput[i])
             if (validateInput(revInput[i])){
                 continue
             } else {
-                return;
+                return
             }
         }
         if(!validateCheckBox(checkBotBox, 'Мы роботов не приглашали!')) {
@@ -377,7 +377,6 @@ if(formAut) {
     }
     checkRbtnBox.onclick = function (e) {
         if(!checkRbtn.checked){
-            console.log(checkRbtnBox)
             checkRbtnBox.classList.remove('error-rbtn-checked');
             checkRbtnBox.firstElementChild.setAttribute('style', 'dysplay:none;');
         }
@@ -394,9 +393,9 @@ if(formAut) {
 /* 4 */
 /***/ (function(module, exports) {
 
-var skill = document.getElementsByClassName('js-skill__row');
+var skill = document.getElementsByClassName('js-skill-row');
 var skillElements = [];
-for (var i=0;i<skill.length; i++){
+for (var i = 0;i < skill.length; i++){
     skillElements[i] = skill[i];
 }
 window.onscroll= () =>{
@@ -446,18 +445,18 @@ var slides = [
     }
 ];
 var activeSlide = 0;
-var activeSlidePrev = slides.length-1;
-var activeSlideNext = activeSlide+1;
+var activeSlidePrev = slides.length - 1;
+var activeSlideNext = activeSlide + 1;
 
-var sliderTitle = document.getElementsByClassName('js-slider__title')[0],
+var sliderTitle = document.getElementsByClassName('js-slider-title')[0],
     sliderSchool = document.getElementsByClassName('js-school')[0],
-    sliderTags = document.getElementsByClassName('js-slider__tags')[0],
-    sliderLink = document.getElementsByClassName('js-slider__link')[0],
-    sliderImages = document.getElementsByClassName('js-slider__images')[0],
-    sliderImagesPrev = document.getElementsByClassName('js-slider__images-prev')[0],
+    sliderTags = document.getElementsByClassName('js-slider-tags')[0],
+    sliderLink = document.getElementsByClassName('js-slider-link')[0],
+    sliderImages = document.getElementsByClassName('js-slider-images')[0],
+    sliderImagesPrev = document.getElementsByClassName('js-slider-images-prev')[0],
     sliderImagesPrevPic = sliderImagesPrev.children[0],
     sliderImagesPrevImg = sliderImagesPrev.children[0],
-    sliderImagesNext = document.getElementsByClassName('js-slider__images-next')[0],
+    sliderImagesNext = document.getElementsByClassName('js-slider-images-next')[0],
     sliderImagesNextPic = sliderImagesNext.children[0],
     sliderImagesNextImg = sliderImagesNext.children[0];
 
@@ -484,13 +483,13 @@ function inicial(activeSlide) {
 inicial(activeSlide)
 
 function activeSl(active) {
-    if (active<0) active= slides.length-1
-    if (active>slides.length-1) active=0
+    if (active < 0) active= slides.length - 1
+    if (active > slides.length - 1) active = 0
     activeSlide = active
-    activeSlidePrev = active-1;
-    activeSlideNext = active+1;
-    if(activeSlidePrev<0) activeSlidePrev = slides.length-1
-    if(activeSlideNext>slides.length-1) activeSlideNext = 0
+    activeSlidePrev = active - 1;
+    activeSlideNext = active + 1;
+    if(activeSlidePrev < 0) activeSlidePrev = slides.length - 1
+    if(activeSlideNext>slides.length - 1) activeSlideNext = 0
 
 
     sliderImages.style.cssText="opacity: 0;";
@@ -548,7 +547,7 @@ menuFixLink.onclick = ()=>{
 
 }
 
-var articles = document.getElementsByClassName('js-block-right_articles');
+var articles = document.getElementsByClassName('js-block-right-articles');
 var articlesChild = articles[0].children;
 var menuLink = document.getElementsByClassName('nav-article__items');
 

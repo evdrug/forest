@@ -3,7 +3,7 @@ textProc = textProc[0];
 var array=[];
  var totalBg = document.getElementsByTagName('*')
 
- for(var i=0; i<totalBg.length;i++){
+ for(var i = 0; i < totalBg.length; i++){
      var urlIm = totalBg[i].style.backgroundImage,
          urlSrc = totalBg[i].getAttribute('src');
 
@@ -18,10 +18,10 @@ var array=[];
      if(urlSrc) array.push(totalBg[i]);
  }
 
-for (var i = 0; i<array.length;i++) {
-     var proc=0;
+for (var i = 0; i < array.length; i++) {
+     var proc = 0;
      array[i].onload=()=>{
-         proc+=100/array.length;
-         textProc.innerHTML = Math.round(proc-1)+'%'
+         proc += 100/array.length;
+         textProc.innerHTML = Math.round(proc -1 ) + '%'
      }
  }

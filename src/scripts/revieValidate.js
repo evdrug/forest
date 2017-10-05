@@ -4,8 +4,8 @@ var preg = /^[\w\.\d-_]+@[\w\.\d-_]+\.\w{2,4}$/i;
 var formAut = document.getElementsByClassName('js-form-aut')[0];
 
 function inputOnfocus(collection) {
-    for (var z = 0; z< collection.length; z++) {
-        collection[z].onfocus =function (e) {
+    for (var z = 0; z < collection.length; z++) {
+        collection[z].onfocus = function (e) {
             this.nextElementSibling.setAttribute('style', 'display: none');
             this.classList.remove('error-input');
         }
@@ -15,7 +15,7 @@ function inputOnfocus(collection) {
 function validateInput(input) {
     if (!input.value){
         input.classList.add('error-input');
-        input.nextElementSibling.innerHTML="Не заполнено поле"
+        input.nextElementSibling.innerHTML = "Не заполнено поле"
         input.nextElementSibling.setAttribute('style', 'display: inline-block')
         return 0
     }else{
@@ -26,7 +26,7 @@ function validateInput(input) {
 function validateEmail(inputEmail) {
     if (inputEmail.value && !inputEmail.value.match(preg)){
         inputEmail.classList.add('error-input');
-        inputEmail.nextElementSibling.innerHTML="Не корректный email"
+        inputEmail.nextElementSibling.innerHTML = "Не корректный email"
         inputEmail.nextElementSibling.setAttribute('style', 'display: inline-block')
         return 0
     }else{
@@ -37,7 +37,7 @@ function validateEmail(inputEmail) {
 function validateCheckBox(checked,message) {
     if (!checked.checked){
         checked.parentNode.classList.add('error-input-checked');
-        checked.previousElementSibling.innerHTML=message;
+        checked.previousElementSibling.innerHTML = message;
         checked.previousElementSibling.setAttribute('style', 'display: inline-block')
         return 0
     }else{
@@ -48,7 +48,7 @@ function validateCheckBox(checked,message) {
 function validateCheckRbtn(checked,message) {
     if (!checked.checked){
         checked.parentNode.classList.add('error-rbtn-checked');
-        checked.previousElementSibling.innerHTML=message;
+        checked.previousElementSibling.innerHTML = message;
         checked.previousElementSibling.setAttribute('style', 'display: inline-block')
         return 0
     }else{
@@ -58,7 +58,7 @@ function validateCheckRbtn(checked,message) {
 
 function clearError(error) {
     error.classList.remove('error-input');
-    error.nextElementSibling.innerHTML=""
+    error.nextElementSibling.innerHTML = ""
     error.nextElementSibling.setAttribute('style', 'display: none')
 }
 
@@ -107,18 +107,18 @@ if(formAut) {
     var revInput = formAut.getElementsByClassName('js-form-input');
     var checkBot = formAut.getElementsByClassName('js-checkbox')[0];
     var checkRbtn = formAut.getElementsByClassName('js-form-rbtn')[0];
-    var checkBotBox = checkBot.getElementsByClassName('fotm__check')[0];
+    var checkBotBox = checkBot.getElementsByClassName('js-fotm-check')[0];
     var checkRbtnBox = checkRbtn.parentNode;
     inputOnfocus(avtInput);
 
     signIn.onclick = function(e){
         e.preventDefault();
-        for(var i =0;i<revInput.length;i++){
+        for(var i = 0; i < revInput.length; i++){
             clearError(revInput[i])
             if (validateInput(revInput[i])){
                 continue
             } else {
-                return;
+                return
             }
         }
         if(!validateCheckBox(checkBotBox, 'Мы роботов не приглашали!')) {
@@ -136,7 +136,6 @@ if(formAut) {
     }
     checkRbtnBox.onclick = function (e) {
         if(!checkRbtn.checked){
-            console.log(checkRbtnBox)
             checkRbtnBox.classList.remove('error-rbtn-checked');
             checkRbtnBox.firstElementChild.setAttribute('style', 'dysplay:none;');
         }

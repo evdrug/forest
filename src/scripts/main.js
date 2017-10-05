@@ -1,5 +1,5 @@
 var btnAvt = document.getElementsByClassName('js-btn-avt'),
-    blockAvt = document.getElementsByClassName('js-welcome__form-wrapper'),
+    blockAvt = document.getElementsByClassName('js-welcome-form-wrapper'),
     btnIndex = document.getElementsByClassName('js-index'),
     menHumb = document.getElementsByClassName('js-menu-hamb'),
     iconHumb = document.getElementsByClassName('js-hamburger'),
@@ -83,7 +83,7 @@ window.onload = ()=> {
             e.preventDefault();
             var pos = titleH1.getBoundingClientRect();
             windPos = window.pageYOffset;
-            var coord = windPos+pos.top + pos.height-20;
+            var coord = windPos+pos.top + pos.height - 20;
             var top = windPos;
             var scr = setInterval(function () {
                 top += 5;
@@ -99,7 +99,7 @@ window.onload = ()=> {
             e.preventDefault();
             var pos = titleH1.getBoundingClientRect();
             windPos = window.pageYOffset;
-            var coord = windPos + pos.top+pos.height-15;
+            var coord = windPos + pos.top+pos.height - 15;
             var scr = setInterval(function () {
                 windPos -= 5;
                 window.scrollTo(0, windPos);

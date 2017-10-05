@@ -26,18 +26,18 @@ var slides = [
     }
 ];
 var activeSlide = 0;
-var activeSlidePrev = slides.length-1;
-var activeSlideNext = activeSlide+1;
+var activeSlidePrev = slides.length - 1;
+var activeSlideNext = activeSlide + 1;
 
-var sliderTitle = document.getElementsByClassName('js-slider__title')[0],
+var sliderTitle = document.getElementsByClassName('js-slider-title')[0],
     sliderSchool = document.getElementsByClassName('js-school')[0],
-    sliderTags = document.getElementsByClassName('js-slider__tags')[0],
-    sliderLink = document.getElementsByClassName('js-slider__link')[0],
-    sliderImages = document.getElementsByClassName('js-slider__images')[0],
-    sliderImagesPrev = document.getElementsByClassName('js-slider__images-prev')[0],
+    sliderTags = document.getElementsByClassName('js-slider-tags')[0],
+    sliderLink = document.getElementsByClassName('js-slider-link')[0],
+    sliderImages = document.getElementsByClassName('js-slider-images')[0],
+    sliderImagesPrev = document.getElementsByClassName('js-slider-images-prev')[0],
     sliderImagesPrevPic = sliderImagesPrev.children[0],
     sliderImagesPrevImg = sliderImagesPrev.children[0],
-    sliderImagesNext = document.getElementsByClassName('js-slider__images-next')[0],
+    sliderImagesNext = document.getElementsByClassName('js-slider-images-next')[0],
     sliderImagesNextPic = sliderImagesNext.children[0],
     sliderImagesNextImg = sliderImagesNext.children[0];
 
@@ -64,13 +64,13 @@ function inicial(activeSlide) {
 inicial(activeSlide)
 
 function activeSl(active) {
-    if (active<0) active= slides.length-1
-    if (active>slides.length-1) active=0
+    if (active < 0) active= slides.length - 1
+    if (active > slides.length - 1) active = 0
     activeSlide = active
-    activeSlidePrev = active-1;
-    activeSlideNext = active+1;
-    if(activeSlidePrev<0) activeSlidePrev = slides.length-1
-    if(activeSlideNext>slides.length-1) activeSlideNext = 0
+    activeSlidePrev = active - 1;
+    activeSlideNext = active + 1;
+    if(activeSlidePrev < 0) activeSlidePrev = slides.length - 1
+    if(activeSlideNext>slides.length - 1) activeSlideNext = 0
 
 
     sliderImages.style.cssText="opacity: 0;";
