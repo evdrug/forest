@@ -129,10 +129,10 @@
                       </label>
                     </div>
                     <div class="form__row">
-                      <label class="form__label-checkbox">
-                        <input class="fotm__check" type="checkbox">
-                        <div class="form__check-fake js-form-input"></div>
+                      <label class="form__label-checkbox js-checkbox">
                         <div class="error-text"></div>
+                        <input class="fotm__check" type="checkbox">
+                        <div class="form__check-fake"></div>
                         <div class="form__check-text">Я человек</div>
                       </label>
                     </div>
@@ -140,12 +140,13 @@
                       <div class="radio__title">Вы точно не робот?</div>
                       <div class="radio__row">
                         <label class="radio__label">
-                          <input class="radio__btn" type="radio" name="robot" value="no">
+                          <div class="error-text"></div>
+                          <input class="radio__btn js-form-rbtn" type="radio" name="robot" value="yes">
                           <div class="radio__btn-fake"></div>
                           <div class="radio__text">Да</div>
                         </label>
                         <label class="radio__label">
-                          <input class="radio__btn" type="radio" name="robot" value="yes">
+                          <input class="radio__btn" type="radio" name="robot" value="no" checked="checked">
                           <div class="radio__btn-fake"></div>
                           <div class="radio__text">Не уверен</div>
                           <div class="error-text"></div>

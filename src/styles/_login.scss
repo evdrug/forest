@@ -324,6 +324,7 @@ z-index: 1;
 
 .fotm__check{
   display: none;
+
 }
 .form__label-checkbox{
   display: flex;
@@ -331,6 +332,8 @@ z-index: 1;
   cursor: pointer;
 
 }
+
+
 
 .fotm__check:checked + .form__check-fake:before{
   transform: rotate(-45deg) translateY(50%) scale(1);

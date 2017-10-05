@@ -458,10 +458,12 @@
 .error-text {
   display: none;
   position: absolute;
+  max-width: 160px;
+  min-width: 160px;
   height: auto;
   bottom: -10px;
   background-color: #f4f5f0;
-  right: 10px;
+  right: 10%;
   border-radius: 50px;
   box-shadow:  0 0 10px rgba(0,0,0,0.5);
   padding: 5px;
@@ -479,7 +481,7 @@
     border-bottom-color: rgba(0, 0, 0, 0.2vh);
     position: absolute;
     top: -10px;
-    left: 15px;
+    left: 20px;
   }
 
   &:after {
@@ -490,9 +492,49 @@
     border-bottom: 9px solid #f4f5f0;
     position: absolute;
     top: -9px;
-    left: 16px;
+    left: 21px;
   }
 }
+
+
+.error-input-checked {
+  position: relative;
+  .error-text{
+    height: auto;
+    bottom: inherit;
+    top: 28px;
+    right: inherit;
+    left: 0;
+  }
+
+  .form__check-fake {
+    background-color: red;
+  }
+  .form__check-text {
+    color: red;
+  }
+}
+
+
+.error-rbtn-checked{
+  position: relative;
+
+  .error-text{
+    height: auto;
+    bottom: inherit;
+    top: 28px;
+    right: inherit;
+    left: 0;
+  }
+
+  .radio__btn-fake {
+    background-color: red;
+  }
+  .radio__text {
+    color: red;
+  }
+}
+
 .contact-form__btns {
   position: absolute;
   bottom: 0;

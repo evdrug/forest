@@ -62,22 +62,24 @@ block content
                                         input.fotm__input-text.js-form-input(type="password" placeholder="Пароль")
                                         .error-text
                                 .form__row
-                                    label.form__label-checkbox
-                                        input.fotm__check(type="checkbox")
-                                        .form__check-fake.js-form-input
+                                    label.form__label-checkbox.js-checkbox
                                         .error-text
+                                        input.fotm__check(type="checkbox")
+                                        .form__check-fake
                                         .form__check-text|Я человек
+
 
                                 .form__row.radio
                                     .radio__title
                                         |Вы точно не робот?
                                     .radio__row
                                         label.radio__label
-                                            input.radio__btn(type="radio" name="robot" value="no")
+                                            .error-text
+                                            input.radio__btn.js-form-rbtn(type="radio" name="robot" value="yes")
                                             .radio__btn-fake
                                             .radio__text|Да
                                         label.radio__label
-                                            input.radio__btn(type="radio" name="robot" value="yes")
+                                            input.radio__btn(type="radio" name="robot" value="no" checked="checked" )
                                             .radio__btn-fake
                                             .radio__text|Не уверен
                                             .error-text
