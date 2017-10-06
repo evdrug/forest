@@ -462,6 +462,12 @@ var sliderTitle = document.getElementsByClassName('js-slider-title')[0],
 
 var flagSlider = true;
 
+function imgCorrect (pref, img) {
+    pref.children[0].srcset=`./images/content/${img}.jpg, ./images/content/${img}@2x.jpg 2x, ./images/content/${img}@3x.jpg 3x`;
+    pref.children[0].media="(max-width: 768px)";
+    pref.children[1].src = `./images/content/${img}@2x.jpg`;
+}
+
 function inicial(activeSlide) {
     sliderTitle.innerHTML=slides[activeSlide].description;
     var slideBg = slides[activeSlide].image,
@@ -469,15 +475,10 @@ function inicial(activeSlide) {
         slideBgNext = slides[activeSlideNext].image;
     var activeSlideTags = slides[activeSlide].tags
     sliderTags.innerHTML=activeSlideTags.join (", ");
-    sliderImages.childNodes[1].srcset=`./images/content/${slideBg}.jpg, ./images/content/${slideBg}@2x.jpg 2x, ./images/content/${slideBg}@3x.jpg 3x`;
-    sliderImages.childNodes[1].media="(max-width: 768px)";
-    sliderImages.childNodes[2].src = `./images/content/${slideBg}@2x.jpg`;
-    sliderImagesPrevPic.children[0].srcset=`./images/content/${slideBgPrev}.jpg, ./images/content/${slideBgPrev}@2x.jpg 2x, ./images/content/${slideBgPrev}@3x.jpg 3x`;
-    sliderImagesPrevPic.children[0].media="(max-width: 768px)";
-    sliderImagesPrevImg.children[1].src = `./images/content/${slideBgPrev}@2x.jpg`;
-    sliderImagesNextPic.children[0].srcset=`./images/content/${slideBgNext}.jpg, ./images/content/${slideBgNext}@2x.jpg 2x, ./images/content/${slideBgNext}@3x.jpg 3x`;
-    sliderImagesNextPic.children[0].media="(max-width: 768px)";
-    sliderImagesNextImg.children[1].src = `./images/content/${slideBgNext}@2x.jpg`;
+    imgCorrect (sliderImages, slideBg);
+    imgCorrect (sliderImagesPrevPic, slideBgPrev);
+    imgCorrect (sliderImagesNextPic, slideBgNext);
+
 }
 
 inicial(activeSlide)
