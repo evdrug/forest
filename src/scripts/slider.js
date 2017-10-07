@@ -71,7 +71,7 @@ function activeSl(active) {
     activeSlidePrev = active - 1;
     activeSlideNext = active + 1;
     if(activeSlidePrev < 0) activeSlidePrev = slides.length - 1
-    if(activeSlideNext>slides.length - 1) activeSlideNext = 0
+    if(activeSlideNext > slides.length - 1) activeSlideNext = 0
 
 
     sliderImages.style.cssText="opacity: 0;";

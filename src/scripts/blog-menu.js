@@ -13,11 +13,11 @@ var articles = document.getElementsByClassName('js-block-right-articles');
 var articlesChild = articles[0].children;
 var menuLink = document.getElementsByClassName('nav-article__items');
 
-for(var z =0;z<menuLink.length;z++){
+for(var z = 0;z < menuLink.length; z++){
     menuLink[z].onclick = (e)=>{
 
         var numberArticle = e.toElement.getAttribute('data-name');
-        for(var x =0; x<articles[0].children.length;x++){
+        for(var x = 0; x < articles[0].children.length; x++){
 
             if(articles[0].children[x].getAttribute('data-name') == numberArticle)  var scrollPosition = articles[0].children[x].offsetTop+headerHeight;
         }
@@ -26,8 +26,8 @@ for(var z =0;z<menuLink.length;z++){
         var top = windPos;
 
         var scr = setInterval(function () {
-            if(top<coord){
-                top +=5;
+            if(top < coord){
+                top += 5;
                 window.scrollTo(0, top);
                 if (top > coord) {
                     clearInterval(scr);
@@ -58,19 +58,19 @@ window.onscroll= () =>{
 
 
     var windPos = window.pageYOffset+30;
-    if(docWidth>768){
-        windPos>headerHeight ? menuNav.style.cssText=`position: fixed; top:25px; left:${blockLeftPosLeft}; width:${menuNavWidth}px;` : menuNav.style.cssText='position: relative; '
+    if(docWidth > 768){
+        windPos>headerHeight ? menuNav.style.cssText = `position: fixed; top:25px; left:${blockLeftPosLeft}; width:${menuNavWidth}px;` : menuNav.style.cssText='position: relative; '
     }
     var articlesPos = articles[0].getBoundingClientRect();
     if(articlesPos.top<0){
 
-        for(var i=0; i<articlesChild.length;i++){
+        for(var i = 0; i < articlesChild.length; i++){
             var articlePosCh = articlesChild[i].offsetTop+headerHeight;
             var articlePosBlock = articlesChild[i].getBoundingClientRect();
-            if (windPos>articlePosCh-50 && windPos<articlePosBlock.height+articlePosCh-50){
+            if (windPos > articlePosCh - 50 && windPos < articlePosBlock.height + articlePosCh - 50){
                 var elMenuNav = menuNav.getElementsByClassName('nav-article__list')[0];
-                for(var z =0; z<elMenuNav.children.length; z++){
-                    if (elMenuNav.children[i]!==elMenuNav.children[z]) {
+                for(var z = 0; z < elMenuNav.children.length; z++){
+                    if (elMenuNav.children[i] !== elMenuNav.children[z]) {
                         elMenuNav.children[z].classList.remove('nav-article__items-active')
                     }
                 }

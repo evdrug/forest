@@ -208,7 +208,7 @@ window.onload = ()=> {
 
 var textProc = document.getElementsByClassName('js-text-svg-prel');
 textProc = textProc[0];
-var array=[];
+var array = [];
  var totalBg = document.getElementsByTagName('*')
 
  for(var i = 0; i < totalBg.length; i++){
@@ -217,10 +217,10 @@ var array=[];
 
      if(urlIm) {
 
-        var re=/url\("\.{1,2}(.+)"\)/;
+        var re = /url\("\.{1,2}(.+)"\)/;
         var found = urlIm.match(re)
-        var image=document.createElement('img')
-            image.src=found[1];
+        var image = document.createElement('img')
+            image.src = found[1];
          array.push(image);
      }
      if(urlSrc) array.push(totalBg[i]);
@@ -228,7 +228,7 @@ var array=[];
 
 for (var i = 0; i < array.length; i++) {
      var proc = 0;
-     array[i].onload=()=>{
+     array[i].onload = ()=>{
          proc += 100/array.length;
          textProc.innerHTML = Math.round(proc -1 ) + '%'
      }
@@ -403,7 +403,7 @@ window.onscroll= () =>{
         var elPos = element.getBoundingClientRect()
         var activeEl = elPos.top+elPos.height - (window.innerHeight) ;
 
-        if (activeEl<0){
+        if (activeEl < 0){
             skillElements[index].classList.add('active');
             skillElements.splice(index,1);
         }
@@ -490,7 +490,7 @@ function activeSl(active) {
     activeSlidePrev = active - 1;
     activeSlideNext = active + 1;
     if(activeSlidePrev < 0) activeSlidePrev = slides.length - 1
-    if(activeSlideNext>slides.length - 1) activeSlideNext = 0
+    if(activeSlideNext > slides.length - 1) activeSlideNext = 0
 
 
     sliderImages.style.cssText="opacity: 0;";
@@ -552,11 +552,11 @@ var articles = document.getElementsByClassName('js-block-right-articles');
 var articlesChild = articles[0].children;
 var menuLink = document.getElementsByClassName('nav-article__items');
 
-for(var z =0;z<menuLink.length;z++){
+for(var z = 0;z < menuLink.length; z++){
     menuLink[z].onclick = (e)=>{
 
         var numberArticle = e.toElement.getAttribute('data-name');
-        for(var x =0; x<articles[0].children.length;x++){
+        for(var x = 0; x < articles[0].children.length; x++){
 
             if(articles[0].children[x].getAttribute('data-name') == numberArticle)  var scrollPosition = articles[0].children[x].offsetTop+headerHeight;
         }
@@ -565,8 +565,8 @@ for(var z =0;z<menuLink.length;z++){
         var top = windPos;
 
         var scr = setInterval(function () {
-            if(top<coord){
-                top +=5;
+            if(top < coord){
+                top += 5;
                 window.scrollTo(0, top);
                 if (top > coord) {
                     clearInterval(scr);
@@ -597,19 +597,19 @@ window.onscroll= () =>{
 
 
     var windPos = window.pageYOffset+30;
-    if(docWidth>768){
-        windPos>headerHeight ? menuNav.style.cssText=`position: fixed; top:25px; left:${blockLeftPosLeft}; width:${menuNavWidth}px;` : menuNav.style.cssText='position: relative; '
+    if(docWidth > 768){
+        windPos>headerHeight ? menuNav.style.cssText = `position: fixed; top:25px; left:${blockLeftPosLeft}; width:${menuNavWidth}px;` : menuNav.style.cssText='position: relative; '
     }
     var articlesPos = articles[0].getBoundingClientRect();
     if(articlesPos.top<0){
 
-        for(var i=0; i<articlesChild.length;i++){
+        for(var i = 0; i < articlesChild.length; i++){
             var articlePosCh = articlesChild[i].offsetTop+headerHeight;
             var articlePosBlock = articlesChild[i].getBoundingClientRect();
-            if (windPos>articlePosCh-50 && windPos<articlePosBlock.height+articlePosCh-50){
+            if (windPos > articlePosCh - 50 && windPos < articlePosBlock.height + articlePosCh - 50){
                 var elMenuNav = menuNav.getElementsByClassName('nav-article__list')[0];
-                for(var z =0; z<elMenuNav.children.length; z++){
-                    if (elMenuNav.children[i]!==elMenuNav.children[z]) {
+                for(var z = 0; z < elMenuNav.children.length; z++){
+                    if (elMenuNav.children[i] !== elMenuNav.children[z]) {
                         elMenuNav.children[z].classList.remove('nav-article__items-active')
                     }
                 }

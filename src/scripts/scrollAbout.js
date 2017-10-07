@@ -8,7 +8,7 @@ window.onscroll= () =>{
         var elPos = element.getBoundingClientRect()
         var activeEl = elPos.top+elPos.height - (window.innerHeight) ;
 
-        if (activeEl<0){
+        if (activeEl < 0){
             skillElements[index].classList.add('active');
             skillElements.splice(index,1);
         }
