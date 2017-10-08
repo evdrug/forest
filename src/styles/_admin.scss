@@ -1,0 +1,139 @@
+.container-admin{
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+  position: relative;
+}
+.admin-header {
+  display: block;
+  width: 100%;
+  background-color: $colorBtn;
+}
+
+.admin-header__content {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 25px;
+}
+
+.admin-header__title, .admin-header__link {
+  color: #fff;
+}
+
+.nav-admin {
+  width: 100%;
+  background-color: #f0efe9;
+  overflow: hidden;
+}
+
+.nav-admin__menu {
+  width: 100%;
+  list-style: none;
+  display: flex;
+}
+.nav-admin__items {
+  border-right: 2px solid #fff ;
+  cursor: pointer;
+  &:hover{
+    background-color: #fff;
+  }
+}
+
+.nav-admin__link-active {
+  background-color: #fff;
+}
+
+.nav-admin__link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 26px 70px;
+}
+
+.section-wrapper {
+  width: 100%;
+  display: block;
+}
+.section-content-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/bg/bg-water.jpg');
+  background-position: center;
+  background-size: cover;
+  opacity: .2;
+  z-index: -1;
+}
+
+.section-content {
+  height: 100%;
+  padding: 50px 30px;
+
+}
+
+.section-content__tab1 {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.section-content__title {
+  font-size: 21px;
+  margin-bottom: 40px;
+}
+
+
+.section-content__page {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+
+}
+
+.admin-block {
+  background-color: rgba(255,255,255,.5);
+  padding-top: 5px ;
+  border-radius: 5px;
+  width: 300px;
+  margin-right: 50px;
+  overflow: hidden;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.admin-block__title {
+  margin-bottom: 20px;
+  padding-left: 10px;
+
+}
+
+.skill-admin__row {
+  border: 1px solid;
+  width: 100%;
+}
+
+.skill-admin__th {
+  padding-left: 10px;
+  padding-right: 20px;
+}
+
+.skill-admin__input-procent {
+  width: 49px;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  margin: 5px;
+}
+.section-content__tab2 {
+  display: none;
+}
+
+.section-content__tab3 {
+  display: block;
+}
