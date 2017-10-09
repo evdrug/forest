@@ -183,7 +183,8 @@ function svgSpriteBuild () {
 function server() {
     browserSync.init({
         server: paths.root,
-        open: false
+        open: false,
+        port: 8080
     });
     browserSync.watch(paths.root + '/**/*.*', browserSync.reload);
 }

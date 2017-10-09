@@ -59,16 +59,16 @@
         <div class="nav-admin">
           <div class="container"></div>
           <ul class="nav-admin__menu">
-            <li class="nav-admin__items"><a class="nav-admin__link nav-admin__link-active" href="#">TAB 1</a></li>
-            <li class="nav-admin__items"><a class="nav-admin__link" href="#">TAB 2</a></li>
-            <li class="nav-admin__items"><a class="nav-admin__link" href="#">TAB 3</a></li>
+            <li class="nav-admin__items"><a class="nav-admin__link nav-admin__link-active js-admin-link" href="#" data-name="block-1">TAB 1</a></li>
+            <li class="nav-admin__items"><a class="nav-admin__link js-admin-link" href="#" data-name="block-2">TAB 2</a></li>
+            <li class="nav-admin__items"><a class="nav-admin__link js-admin-link" href="#" data-name="block-3">TAB 3</a></li>
           </ul>
         </div>
         <div class="section-wrapper">
           <div class="section-content-bg"></div>
           <div class="section-content">
             <div class="container">
-              <div class="section-content__tab1">
+              <div class="section-content__tab section-content__tab-active" data-name="block-1">
                 <h2 class="section-content__title">Страница «Обо мне»</h2>
                 <div class="section-content__page">
                   <article class="admin-block">
@@ -167,16 +167,79 @@
                   </article>
                 </div>
               </div>
-              <div class="section-content__tab2">
+              <div class="section-content__tab" data-name="block-2">
                 <h2 class="section-content__title">Страница «Мои работы»</h2>
+                <div class="section-content__page">
+                  <div class="admin-block">
+                    <form class="add-work" action="" method="POST">
+                      <div class="wrapper-row">
+                        <div class="form-admin__row">
+                          <label>
+                            <div class="title-input">Название проекта</div>
+                            <input class="form-admin__input" type="text" value="" name="title-work">
+                          </label>
+                        </div>
+                        <div class="form-admin__row">
+                          <label>
+                            <div class="title-input">Технологии</div>
+                            <input class="form-admin__input" type="text" value="" name="tech-work">
+                          </label>
+                        </div>
+                        <div class="form-admin__row">
+                          <label>
+                            <div class="title-input">Загрузить картинку</div>
+                            <div class="work-add"></div>
+                            <input class="form-admin__input file-down" type="file" name="photo-work">
+                          </label>
+                        </div>
+                      </div>
+                      <div class="form-admin__row">
+                        <button class="contact-form__btn" type="submit">Добавить</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
               </div>
-              <div class="section-content__tab3">
+              <div class="section-content__tab" data-name="block-3">
                 <h2 class="section-content__title">Страница «Блог»</h2>
-                <div class="list-articles">Список статей:
-                  <ul class="list-articles__list">
-                    <li class="list-articles__item">Статья 1</li>
-                    <li class="list-articles__item">Статья 2</li>
-                  </ul>
+                <div class="section-content__page">
+                  <div class="admin-block">
+                    <div class="list-articles">Список статей:
+                      <ul class="list-articles__list">
+                        <li class="list-articles__item">Статья 1</li>
+                        <li class="list-articles__item">Статья 2</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="wraper-form-blog">
+                    <div class="admin-block">
+                      <form class="form-blog js-form-blog" action="/api/blog" method="POST">
+                        <div class="wrapper-row">
+                          <div class="form-admin__row">
+                            <label class="form-blog__label">
+                              <div class="title-input">Название статьи:</div>
+                              <input class="form-admin__input" type="text" value="" name="title" placeholder="Введите заголовок статьи" required>
+                            </label>
+                          </div>
+                          <div class="form-admin__row">
+                            <label class="form-blog__label">
+                              <div class="title-input">Дата публикации</div>
+                              <input class="form-admin__input" type="date" value="" name="date" required>
+                            </label>
+                          </div>
+                          <div class="form-admin__row">
+                            <label class="form-blog__label">
+                              <div class="title-input">Введите текст статьи</div>
+                              <textarea class="form-admin__input form-admin__input-area" placeholder="Введите текст статьи" value="" name="text" required></textarea>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form-admin__row">
+                          <button class="contact-form__btn js-save-blog" type="submit">Сохранить</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
